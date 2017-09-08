@@ -128,6 +128,8 @@ Run > ng g c login
       { path:'shopping-care', component:ShoppingCartComponent},
       { path:'check-out', component:CheckOutComponent},
       { path:'order-success', component:OrderSuccessComponent},
-      { path:'login', component:LoginComponent}
+      { path:'login', component:LoginComponent},
+      { path:'admin/products', component: AdminProductsComponent},
+      { path:'admin/orders', component: AdminOrdersComponent}
     ])
 ```
