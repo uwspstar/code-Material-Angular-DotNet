@@ -94,3 +94,6 @@ body {
 }
 
 ```
+
+## Step 9 : create new bs-navbar component
+Run > ng g c bs-navbar
