@@ -73,8 +73,10 @@ imports: [
 ```
 
 ## Step 6 : install bootstrap4
+
 - Run > npm i --save bootstrap
 - Run > npm i --save bootstrap@next
+
 
 ## Step 7 : import bootstrap4 to style.css
 
@@ -85,6 +87,7 @@ imports: [
 NOTE : [bootstrap4 siten](https://getbootstrap.com/)
 
 ## Step 8 : import bootstrap4 nav starter templet to app.component.html
+
 - https://getbootstrap.com/docs/4.0/examples/starter-template/
 
 - at style.css page
@@ -96,4 +99,17 @@ body {
 ```
 
 ## Step 9 : create new bs-navbar component
-Run > ng g c bs-navbar
+
+- Run > ng g c bs-navbar
+
+## Step 10 : move navbar section to the component
+
+## Step 11 : create following components
+- Run > ng g c home
+- Run > ng g c products
+- Run > ng g c shopping-cart
+- Run > ng g c check-out
+- Run > ng g c order-success
+- Run > ng g c my-orders
+- Run > ng g c admin/admin-products
+- Run > ng g c admin/admin-orders
