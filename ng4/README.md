@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## step 1 : install new angular4 project
 
-## step 2 : install firebase db2017 project, 
+## step 2 : install firebase db2017 project 
 
 copy the configuration to src/environments/enviroment.ts page , ( .prod.ts page also)
 
@@ -51,3 +51,16 @@ Run > npm i --save firebase@4.2.0
 
 ## step 4 : 
 Run > npm i --save angularfire2@4.0.0-rc.1
+
+## step 5 : app.module.ts
+
+import { AngularFireModule } from 'angularfire2'
+import { AngularFireDatabaseModule } from 'angularfire2/database'
+import { AngularFireAuthModule } from 'angularfire2/Auth'
+import { environment } from "../environments/environment";
+
+...
+imports: [
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase)
+  ]
