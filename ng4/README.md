@@ -272,3 +272,17 @@ Hosting URL: https://db2017-9dd94.firebaseapp.com
 
 
 # Secontion 2 : Authentication and Authorization
+
+## Step 2 : enable the google "SIGN-IN METHOD"
+
+```
+https://console.firebase.google.com/project/db2017-9dd94/authentication/providers
+```
+
+## Step 2 : update bs-navbar
+
+```
+<li class="nav-item">
+    <a class="nav-link" routerLink="/login">Login</a>
+</li>
+```
