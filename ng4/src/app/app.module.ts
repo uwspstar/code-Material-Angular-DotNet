@@ -40,7 +40,7 @@ import { LoginComponent } from './login/login.component';
     RouterModule.forRoot([
       { path:'', component:HomeComponent},
       { path:'products', component:ProductsComponent},
-      { path:'shopping-care', component:ShoppingCartComponent},
+      { path:'shopping-cart', component:ShoppingCartComponent},
       { path:'check-out', component:CheckOutComponent},
       { path:'order-success', component:OrderSuccessComponent},
       { path:'login', component:LoginComponent},

@@ -133,3 +133,14 @@ Run > ng g c login
       { path:'admin/orders', component: AdminOrdersComponent}
     ])
 ```
+
+## Step 13 : update bs-navbar
+
+```
+<li class="nav-item active">
+    <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" routerLink="/shopping-cart">Shopping Cart</a>
+</li>
+```
