@@ -69,7 +69,6 @@ imports: [
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ]
-
 ```
 
 ## Step 6 : install bootstrap4
@@ -77,7 +76,6 @@ imports: [
 ```
 Run > npm i --save bootstrap
 Run > npm i --save bootstrap@next
-
 ```
 
 
@@ -85,7 +83,6 @@ Run > npm i --save bootstrap@next
 
 ```
 @import '~bootstrap/dist/css/bootstrap.css';
-
 ```
 NOTE : [bootstrap4 siten](https://getbootstrap.com/)
 
@@ -98,14 +95,12 @@ NOTE : [bootstrap4 siten](https://getbootstrap.com/)
 body {
     padding-top: 5rem;
 }
-
 ```
 
 ## Step 9 : create new bs-navbar component
 
 ```
 Run > ng g c bs-navbar
-
 ```
 
 ## Step 10 : move navbar section to the component
@@ -121,5 +116,18 @@ Run > ng g c order-success
 Run > ng g c my-orders
 Run > ng g c admin/admin-products
 Run > ng g c admin/admin-orders
+Run > ng g c login
+```
 
+## Step 12 : add router in the app.component.ts
+
+```
+ RouterModule.forRoot([
+      { path:'', component:HomeComponent},
+      { path:'products', component:ProductsComponent},
+      { path:'shopping-care', component:ShoppingCartComponent},
+      { path:'check-out', component:CheckOutComponent},
+      { path:'order-success', component:OrderSuccessComponent},
+      { path:'login', component:LoginComponent}
+    ])
 ```
