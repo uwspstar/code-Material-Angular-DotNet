@@ -74,8 +74,11 @@ imports: [
 
 ## Step 6 : install bootstrap4
 
-- Run > npm i --save bootstrap
-- Run > npm i --save bootstrap@next
+```
+Run > npm i --save bootstrap
+Run > npm i --save bootstrap@next
+
+```
 
 
 ## Step 7 : import bootstrap4 to style.css
@@ -100,16 +103,23 @@ body {
 
 ## Step 9 : create new bs-navbar component
 
-- Run > ng g c bs-navbar
+```
+Run > ng g c bs-navbar
+
+```
 
 ## Step 10 : move navbar section to the component
 
 ## Step 11 : create following components
-- Run > ng g c home
-- Run > ng g c products
-- Run > ng g c shopping-cart
-- Run > ng g c check-out
-- Run > ng g c order-success
-- Run > ng g c my-orders
-- Run > ng g c admin/admin-products
-- Run > ng g c admin/admin-orders
+
+```
+Run > ng g c home
+Run > ng g c products
+Run > ng g c shopping-cart
+Run > ng g c check-out
+Run > ng g c order-success
+Run > ng g c my-orders
+Run > ng g c admin/admin-products
+Run > ng g c admin/admin-orders
+
+```
