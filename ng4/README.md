@@ -220,3 +220,49 @@ NgbModule.forRoot(),
 { path:'my/orders', component:MyOrdersComponent},
 
 ```
+# DEPLOYMENT ON FIREBASE 
+```
+[Deploy Your Site on Firebase](https://firebase.google.com/docs/hosting/deploying)
+```
+
+## Step 16 : deploy to Firebase 
+
+- install
+
+```
+Run > npm install -g firebase-tools
+
+Run > firebase login
+ 
+NOTE : will open the browser to let login with your email
+
+Run > firebase init
+
+NOTE : follow the steps
+```
+
+- Update firebase.json file
+
+```
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
+
+```
+Run > ng build --prod
+```
+
+```
+Run > firebase deploy
+
+NOTE : 
+Project Console: https://console.firebase.google.com/project/db2017-9dd94/overview
+Hosting URL: https://db2017-9dd94.firebaseapp.com
+```
