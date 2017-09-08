@@ -83,3 +83,14 @@ imports: [
 
 ```
 NOTE : [bootstrap4 siten](https://getbootstrap.com/)
+
+## Step 8 : import bootstrap4 nav starter templet to app.component.html
+- https://getbootstrap.com/docs/4.0/examples/starter-template/
+
+- at style.css page
+```
+body {
+    padding-top: 5rem;
+}
+
+```
