@@ -34,6 +34,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 copy the configuration to src/environments/enviroment.ts page , ( .prod.ts page also)
 
+```
 export const environment = {
   production: false,
   firebase: {
@@ -45,7 +46,7 @@ export const environment = {
     messagingSenderId: "759738631975"
   }
 };
-
+```
 ## step 3 : 
 Run > npm i --save firebase@4.2.0
 
