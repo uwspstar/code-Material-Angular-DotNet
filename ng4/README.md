@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
+# Secontion 1 : Project setup
+
 ## Step 1 : install new Ng4 project
 
 - Development server
@@ -266,3 +268,6 @@ NOTE :
 Project Console: https://console.firebase.google.com/project/db2017-9dd94/overview
 Hosting URL: https://db2017-9dd94.firebaseapp.com
 ```
+
+
+# Secontion 2 : Authentication and Authorization
