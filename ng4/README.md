@@ -176,11 +176,12 @@ NgbModule.forRoot(),
 </li>
 ```
 
-## Step 15 : update dropdown in bs-navbar
+## Step 15 : update dropdown in bs-navbar and app.module
 
+- html
 ```
 <li ngbDropdown class="nav-item dropdown">
-    <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
     <div ngbDropdownMenu class="dropdown-menu show" aria-labelledby="dropdown01">
         <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
         <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
@@ -189,4 +190,16 @@ NgbModule.forRoot(),
         <a class="dropdown-item">Log Out</a>
     </div>
 </li>
+```
+- css
+```
+.dropdown-toggle{
+    cursor: pointer;
+}
+```
+- app.module router
+
+```
+{ path:'my/orders', component:MyOrdersComponent},
+
 ```
