@@ -256,6 +256,7 @@ NOTE : follow the steps
     ]
   }
 }
+```
 
 ```
 Run > ng build --prod
