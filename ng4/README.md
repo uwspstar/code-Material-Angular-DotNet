@@ -53,16 +53,18 @@ Run > npm i --save firebase@4.2.0
 Run > npm i --save angularfire2@4.0.0-rc.1
 
 ## step 5 : app.module.ts
-
+```
 import { AngularFireModule } from 'angularfire2'
 import { AngularFireDatabaseModule } from 'angularfire2/database'
 import { AngularFireAuthModule } from 'angularfire2/Auth'
 import { environment } from "../environments/environment";
+```
+... 
 
 ```
 imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase)
   ]
-  
+
 ```
