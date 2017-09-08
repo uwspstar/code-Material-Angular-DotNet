@@ -29,7 +29,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## step 1 : install new angular4 project
-## step 2 : install firebase db2017 project, copy the configuration to src/environments/enviroment.ts page , ( .prod.ts page also)
+
+## step 2 : install firebase db2017 project, 
+
+copy the configuration to src/environments/enviroment.ts page , ( .prod.ts page also)
 
 export const environment = {
   production: false,
@@ -42,3 +45,9 @@ export const environment = {
     messagingSenderId: "759738631975"
   }
 };
+
+## step 3 : 
+Run > npm i --save firebase@4.2.0
+
+## step 4 : 
+Run > npm i --save angularfire2@4.0.0-rc.1
