@@ -144,3 +144,34 @@ Run > ng g c login
     <a class="nav-link" routerLink="/shopping-cart">Shopping Cart</a>
 </li>
 ```
+
+## Step 14 : add ng-bootstrap to dropdown in bs-navbar,and module to app.module
+
+```
+[ng-bootstrap](https://ng-bootstrap.github.io/#/home)
+```
+
+```
+Run > npm install --save @ng-bootstrap/ng-bootstrap
+```
+
+- app.module
+```
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+```
+
+```
+NgbModule.forRoot(),
+```
+
+- bs-navba
+```
+<li ngbDropdown class="nav-item dropdown">
+<a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+<div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+</div>
+</li>
+```
