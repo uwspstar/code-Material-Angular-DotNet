@@ -71,3 +71,15 @@ imports: [
   ]
 
 ```
+
+## Step 6 : install bootstrap4
+Run > npm i --save bootstrap
+Run > npm i --save bootstrap@next
+
+## Step 7 : import bootstrap4 to style.css
+
+```
+@import '~bootstrap/dist/css/bootstrap.css';
+
+```
+NOTE : [bootstrap4 site](https://getbootstrap.com/)
