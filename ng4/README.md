@@ -175,3 +175,18 @@ NgbModule.forRoot(),
 </div>
 </li>
 ```
+
+## Step 15 : update dropdown in bs-navbar
+
+```
+<li ngbDropdown class="nav-item dropdown">
+    <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+    <div ngbDropdownMenu class="dropdown-menu show" aria-labelledby="dropdown01">
+        <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
+        <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
+        <a class="dropdown-item" routerLink="/admin/products">Manage Products</a>
+        <hr/>
+        <a class="dropdown-item">Log Out</a>
+    </div>
+</li>
+```
