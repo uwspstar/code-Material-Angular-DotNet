@@ -59,8 +59,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database'
 import { AngularFireAuthModule } from 'angularfire2/Auth'
 import { environment } from "../environments/environment";
 
-...
+```
 imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase)
   ]
+  
+```
