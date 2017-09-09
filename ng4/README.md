@@ -573,7 +573,7 @@ Run > ng g s auth
 ```
 - update app.module
 
-```
+```javascript
 ...
 import { AuthService } from './services/auth/auth.service';
 
