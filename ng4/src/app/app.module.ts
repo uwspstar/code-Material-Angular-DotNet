@@ -11,6 +11,7 @@ import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './services/auth/auth.service';
+import { AuthGuardService } from './services/auth/auth-guard.service';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AuthService } from './services/auth/auth.service';
     NgbModule.forRoot()
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })

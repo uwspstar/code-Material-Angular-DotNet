@@ -11,13 +11,14 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuardService } from './services/auth/auth-guard.service';
 
 
 const appRoutes: Routes = [
       { path: '', component: HomeComponent},
       { path: 'products', component: ProductsComponent},
       { path: 'shopping-cart', component: ShoppingCartComponent},
-      { path: 'check-out', component: CheckOutComponent},
+      { path: 'check-out', component: CheckOutComponent, canActivate : [ AuthGuardService ]},
       { path: 'order-success', component: OrderSuccessComponent},
       { path: 'my/orders', component: MyOrdersComponent},
       { path: 'login', component: LoginComponent},

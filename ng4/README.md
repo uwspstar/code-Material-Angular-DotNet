@@ -669,3 +669,55 @@ export class BsNavbarComponent {
   </a>
 ...
 ```
+
+## Step 9 : limit the anonymousUser access the url with auth-guard service
+
+```
+Run >  ng g s services/auth/auth-guard
+```
+- AuthGuardService
+
+```javascript
+import { Injectable } from '@angular/core';
+import { AuthService } from './auth.service';
+import { CanActivate, Router } from '@angular/router';
+import 'rxjs/add/operator/map';
+
+@Injectable()
+export class AuthGuardService implements CanActivate {
+
+  constructor(private auth: AuthService, private router: Router) { }
+
+  canActivate() {
+
+    return this.auth.user$.map(user => {
+      if (user) {
+          return true;
+        }
+
+      this.router.navigate(['/login']);
+      return false;
+    });
+
+  }
+}
+```
+- update app.module
+
+```javascript
+...
+providers: [
+    AuthService,
+    AuthGuardService
+  ],
+...
+```
+- update app-routing.module
+```javascript
+...
+ { path: 'check-out', component: CheckOutComponent, canActivate : [ AuthGuardService ]},
+...
+ ```
+
+
+ ## Step 10 : 
