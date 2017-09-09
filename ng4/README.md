@@ -285,3 +285,22 @@ https://console.firebase.google.com/project/db2017-9dd94/authentication/provider
     <a class="nav-link" routerLink="/login">Login</a>
 </li>
 ```
+
+- if you see error below, you just need to enable your "Identity Toolkit API" on [console.developers.google API Page Library](https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=db2017-9dd94&pli=1&duration=PT1H)
+
+```
+{
+ "error": {
+  "errors": [
+   {
+    "domain": "usageLimits",
+    "reason": "accessNotConfigured",
+    "message": "Access Not Configured. Google Identity Toolkit API has not been used in project 759738631975 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=759738631975 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+    "extendedHelp": "https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=759738631975"
+   }
+  ],
+  "code": 403,
+  "message": "Access Not Configured. Google Identity Toolkit API has not been used in project 759738631975 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=759738631975 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+ }
+}
+```
