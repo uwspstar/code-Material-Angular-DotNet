@@ -8,13 +8,13 @@ import * as firebase from 'firebase';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  
-  constructor(private afAuth : AngularFireAuth) { 
+
+  constructor(private afAuth: AngularFireAuth) {
 
   }
 
-  login(){
-    var provider = new firebase.auth.GoogleAuthProvider();
+  login() {
+    const provider = new firebase.auth.GoogleAuthProvider();
     this.afAuth.auth.signInWithPopup(provider);
   }
 }

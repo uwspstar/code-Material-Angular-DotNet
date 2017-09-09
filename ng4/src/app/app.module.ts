@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from 'angularfire2'
-import { AngularFireDatabaseModule } from 'angularfire2/database'
-import { AngularFireAuthModule } from 'angularfire2/Auth'
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/Auth';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { environment } from "../environments/environment";
+import { environment } from '../environments/environment';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
@@ -40,15 +40,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AngularFireAuthModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
-      { path:'', component:HomeComponent},
-      { path:'products', component:ProductsComponent},
-      { path:'shopping-cart', component:ShoppingCartComponent},
-      { path:'check-out', component:CheckOutComponent},
-      { path:'order-success', component:OrderSuccessComponent},
-      { path:'my/orders', component:MyOrdersComponent},
-      { path:'login', component:LoginComponent},
-      { path:'admin/products', component: AdminProductsComponent},
-      { path:'admin/orders', component: AdminOrdersComponent}
+      { path: '', component: HomeComponent},
+      { path: 'products', component: ProductsComponent},
+      { path: 'shopping-cart', component: ShoppingCartComponent},
+      { path: 'check-out', component: CheckOutComponent},
+      { path: 'order-success', component: OrderSuccessComponent},
+      { path: 'my/orders', component: MyOrdersComponent},
+      { path: 'login', component: LoginComponent},
+      { path: 'admin/products', component: AdminProductsComponent},
+      { path: 'admin/orders', component: AdminOrdersComponent}
     ])
   ],
   providers: [],
