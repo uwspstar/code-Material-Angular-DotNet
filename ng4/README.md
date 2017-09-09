@@ -350,6 +350,8 @@ export class LoginComponent {
 }
 ```
 
+## Step 4 : update logout
+
 - bs-navbar.component.ts
 
 ```javascript
@@ -372,4 +374,47 @@ export class BsNavbarComponent {
   }
 
 }
+```
+
+## Step 5 : update logout and login
+
+- bs-navbar.component.ts
+
+```javascript
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from 'angularfire2/auth'
+import * as firebase from 'firebase';
+
+
+@Component({
+  selector: 'bs-navbar',
+  templateUrl: './bs-navbar.component.html',
+  styleUrls: ['./bs-navbar.component.css']
+})
+export class BsNavbarComponent {
+
+  user: firebase.User;
+
+  constructor(private afAuth: AngularFireAuth) { 
+    afAuth.authState.subscribe( user => this.user = user);
+  }
+
+  logout(){
+    this.afAuth.auth.signOut();
+  }
+
+}
+```
+
+- bs-navbar.component.html
+
+```html
+<li *ngIf="!user" class="nav-item">
+    <a class="nav-link" routerLink="/login">Login</a>
+</li>
+<li ngbDropdown *ngIf="user" class="nav-item dropdown">
+    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{user.email }}
+    </a>
+...
 ```
