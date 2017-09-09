@@ -47,7 +47,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 copy the configuration to src/environments/enviroment.ts page , ( .prod.ts page also)
 
-```
+```javascript
 export const environment = {
   production: false,
   firebase: {
@@ -73,7 +73,8 @@ Run > npm i --save angularfire2@4.0.0-rc.1
 ```
 
 ## Step 5 : app.module.ts
-```
+
+```javascript
 import { AngularFireModule } from 'angularfire2'
 import { AngularFireDatabaseModule } from 'angularfire2/database'
 import { AngularFireAuthModule } from 'angularfire2/Auth'
@@ -81,7 +82,7 @@ import { environment } from "../environments/environment";
 ```
 ... 
 
-```
+```javascript
 imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -140,7 +141,7 @@ Run > ng g c login
 
 ## Step 12 : add router in the app.component.ts
 
-```
+```javascript
  RouterModule.forRoot([
       { path:'', component:HomeComponent},
       { path:'products', component:ProductsComponent},
@@ -155,7 +156,7 @@ Run > ng g c login
 
 ## Step 13 : update bs-navbar
 
-```
+```html
 <li class="nav-item active">
     <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
 </li>
@@ -175,16 +176,17 @@ Run > npm install --save @ng-bootstrap/ng-bootstrap
 ```
 
 - app.module
-```
+```javascript
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 ```
 
-```
+```javascript
 NgbModule.forRoot(),
 ```
 
 - bs-navba
-```
+
+```html
 <li ngbDropdown class="nav-item dropdown">
 <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
 <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
@@ -198,7 +200,8 @@ NgbModule.forRoot(),
 ## Step 15 : update dropdown in bs-navbar and app.module
 
 - html
-```
+
+```html
 <li ngbDropdown class="nav-item dropdown">
     <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
     <div ngbDropdownMenu class="dropdown-menu show" aria-labelledby="dropdown01">
@@ -245,7 +248,7 @@ NOTE : follow the steps
 
 - Update firebase.json file
 
-```
+```javascript
 {
   "hosting": {
     "public": "dist",
@@ -282,7 +285,7 @@ https://console.firebase.google.com/project/db2017-9dd94/authentication/provider
 
 - html
 
-```
+```html
 <li class="nav-item">
     <a class="nav-link" routerLink="/login">Login</a>
 </li>
