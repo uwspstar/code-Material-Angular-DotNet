@@ -562,3 +562,110 @@ import { AppRoutingModule } from './app-routing.module';
 })
 export class AppModule { }
 ```
+
+## Step 8 : Refactor auth service, login component and bs-navbar component 
+
+NOTE : DO unit test Components.  CANOOT unit test Service. 
+
+- auth service
+```
+Run > ng g s auth
+```
+- update app.module
+
+```
+...
+import { AuthService } from './services/auth/auth.service';
+
+...
+providers: [
+    AuthService
+  ],
+...
+```
+- update auth.service
+
+```javascript
+import { Injectable } from '@angular/core';
+import { AngularFireAuth } from 'angularfire2/auth/auth';
+import * as firebase from 'firebase';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable()
+export class AuthService {
+
+  user$: Observable<firebase.User>;
+
+  constructor( private afAuth: AngularFireAuth ) {
+    this.user$ = afAuth.authState;
+  }
+
+  login() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    this.afAuth.auth.signInWithPopup(provider);
+  }
+
+  logout() {
+    this.afAuth.auth.signOut();
+  }
+
+}
+
+```
+- update login component
+
+```javascript
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth/auth.service';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent {
+
+  constructor(private auth: AuthService) {
+
+  }
+
+  login() {
+   this.auth.login();
+  }
+}
+```
+- update bs-navbar component
+
+```javascript
+
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth/auth.service';
+
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'bs-navbar',
+  templateUrl: './bs-navbar.component.html',
+  styleUrls: ['./bs-navbar.component.css']
+})
+export class BsNavbarComponent {
+
+  constructor(public auth: AuthService) {
+  }
+
+  logout() {
+    this.auth.logout();
+  }
+
+}
+```
+- update bs-navbar html
+
+```html
+...
+<li ngbDropdown *ngIf="auth.user$ | async as user; else anonymousUser" class="nav-item dropdown">
+  <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{user.email }}
+  </a>
+...
+```
