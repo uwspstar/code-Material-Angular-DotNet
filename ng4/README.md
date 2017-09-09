@@ -292,14 +292,14 @@ https://console.firebase.google.com/project/db2017-9dd94/authentication/provider
 
 - html
 
-```
+```html
 <button (click)="login()" class="btn btn-primary">Login with Google</button>
 
 ```
 
 - login.component.ts
 
-```
+```javascript
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
