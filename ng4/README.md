@@ -280,10 +280,47 @@ https://console.firebase.google.com/project/db2017-9dd94/authentication/provider
 
 ## Step 2 : update bs-navbar
 
+- html
+
 ```
 <li class="nav-item">
     <a class="nav-link" routerLink="/login">Login</a>
 </li>
+```
+
+## Step 3 : update login component
+
+- html
+
+```
+<button (click)="login()" class="btn btn-primary">Login with Google</button>
+
+```
+
+- login.component.ts
+
+```
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent {
+  
+  constructor(private afAuth : AngularFireAuth) { 
+
+  }
+
+  login(){
+    var provider = new firebase.auth.GoogleAuthProvider();
+    this.afAuth.auth.signInWithPopup(provider);
+  }
+}
+
 ```
 
 - if you see error below, you just need to enable your "Identity Toolkit API" on [console.developers.google API Page Library](https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=db2017-9dd94&pli=1&duration=PT1H)
