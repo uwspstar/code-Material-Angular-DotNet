@@ -420,3 +420,51 @@ export class BsNavbarComponent {
 ```
 
 NOTE : `user` has `user.displayName` , `user.email`
+
+## Step 6 : update Observe with Async
+
+- bs-navbar.component.ts
+
+```javascript
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from 'angularfire2/auth'
+import * as firebase from 'firebase';
+import { Observable } from "rxjs/Observable";
+
+
+@Component({
+  selector: 'bs-navbar',
+  templateUrl: './bs-navbar.component.html',
+  styleUrls: ['./bs-navbar.component.css']
+})
+export class BsNavbarComponent {
+
+  user: Observable<firebase.User>;
+
+  constructor(private afAuth: AngularFireAuth) { 
+    this.user = afAuth.authState;
+  }
+
+  logout(){
+    this.afAuth.auth.signOut();
+  }
+
+}
+
+```
+
+- bs-navbar.component.html
+
+```html
+<ng-template #anonymousUser>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+    </li>
+</ng-template>
+
+<li ngbDropdown *ngIf="user$ | async as user; else anonymousUser" class="nav-item dropdown">
+    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{user.email }}
+    </a>
+            ...
+```
