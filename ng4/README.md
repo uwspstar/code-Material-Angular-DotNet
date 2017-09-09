@@ -396,7 +396,7 @@ export class BsNavbarComponent {
   user: firebase.User;
 
   constructor(private afAuth: AngularFireAuth) { 
-    afAuth.authState.subscribe( user => this.user = user);
+    afAuth.authState.subscribe( user => {this.user = user; console.log(user)});
   }
 
   logout(){
@@ -418,3 +418,5 @@ export class BsNavbarComponent {
     </a>
 ...
 ```
+
+NOTE : `user` has `user.displayName` , `user.email`
