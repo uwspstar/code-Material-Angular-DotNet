@@ -289,6 +289,11 @@ https://console.firebase.google.com/project/db2017-9dd94/authentication/provider
 <li class="nav-item">
     <a class="nav-link" routerLink="/login">Login</a>
 </li>
+
+...
+
+<a class="dropdown-item" (click)="logout()">Log Out</a>
+            
 ```
 
 ## Step 3 : update login component
@@ -342,5 +347,29 @@ export class LoginComponent {
   "code": 403,
   "message": "Access Not Configured. Google Identity Toolkit API has not been used in project 759738631975 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=759738631975 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
  }
+}
+```
+
+- bs-navbar.component.ts
+
+```javascript
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from 'angularfire2/auth'
+
+@Component({
+  selector: 'bs-navbar',
+  templateUrl: './bs-navbar.component.html',
+  styleUrls: ['./bs-navbar.component.css']
+})
+export class BsNavbarComponent {
+
+  constructor(private afAuth: AngularFireAuth) { 
+    afAuth.authState.subscribe(x=>console.log(x));
+  }
+
+  logout(){
+    this.afAuth.auth.signOut();
+  }
+
 }
 ```
