@@ -323,7 +323,7 @@ export class LoginComponent {
 
 ```
 
-- if you see error below, you just need to enable your "Identity Toolkit API" on [console.developers.google API Page Library](https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=db2017-9dd94&pli=1&duration=PT1H)
+- NOTE : If you see `ERROR` below, you just need to enable your `Identity Toolkit API` on [console.developers.google API Page Library](https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=db2017-9dd94&pli=1&duration=PT1H)
 
 ```
 {
