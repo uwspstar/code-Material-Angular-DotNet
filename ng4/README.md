@@ -729,7 +729,165 @@ const appRoutes: Routes = [
       { path: 'admin/orders', component: AdminOrdersComponent, canActivate : [ AuthGuardService ]}
 ];
 ...
- ```
+```
 
 
- ## Step 10 : 
+## Step 10 : User Service
+
+```
+Run > ng g s services/user/user
+```
+- add service to app.moudle
+
+```javascript
+...
+providers: [
+    AuthService,
+    AuthGuardService,
+    UserService
+  ],
+...
+```
+- user.service
+
+```javascript
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
+import * as firebase from 'firebase';
+
+@Injectable()
+export class UserService {
+
+  constructor(private db: AngularFireDatabase) { }
+
+  save(user: firebase.User) {
+    this.db.object('/users/' + user.uid).update({
+      name : user.displayName,
+      email: user.email
+    });
+  }
+}
+```
+- update app.component
+
+```javascript
+import { Component } from '@angular/core';
+import { AuthService } from './services/auth/auth.service';
+import { Router } from '@angular/router';
+import { UserService } from './services/user/user.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  constructor(private userService: UserService, private auth: AuthService, router: Router) {
+    auth.user$.subscribe( user => {
+      if (user) {
+        userService.save(user); // in case, the user update new email and name
+        // tslint:disable-next-line:prefer-const
+        let returnUrl = localStorage.getItem('returnUrl');
+        router.navigateByUrl(returnUrl);
+      }
+    });
+
+  }
+}
+```
+
+## Step 11 : AdminAuthGuard Service
+
+```
+Run > ng g s services/admin/admin-auth-guard
+```
+- add service to app.moudle
+
+```javascript
+...
+providers: [
+    AuthService,
+    AuthGuardService,
+    AdminAuthGuardService,
+    UserService
+  ],
+...
+```
+- update user.service, add get(uid)
+
+```javascript
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import * as firebase from 'firebase';
+import { AppUser } from '../../models/app-user';
+
+@Injectable()
+export class UserService {
+
+  constructor(private db: AngularFireDatabase) { }
+
+  save(user: firebase.User) {
+    this.db.object('/users/' + user.uid).update({
+      name : user.displayName,
+      email: user.email
+    });
+  }
+
+  get(uid: string): FirebaseObjectObservable<AppUser> {
+    return this.db.object('/users/' + uid);
+  }
+}
+
+```
+
+- create new models folder, add new app-user interface under the models folder
+
+```javascript
+export interface AppUser {
+    name: string;
+    email: string;
+    isAdmin: boolean;
+}
+
+```
+- admin-auth-guard
+
+```javascript
+import { Injectable } from '@angular/core';
+import { CanActivate } from '@angular/router';
+import { AuthService } from '../auth/auth.service';
+import { UserService } from '../user/user.service';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable()
+export class AdminAuthGuardService implements CanActivate {
+
+  constructor(private auth: AuthService, private userService: UserService) { }
+
+  canActivate(): Observable<boolean> {
+
+    return this.auth.user$
+    .switchMap(user => this.userService.get(user.uid))
+    .map(appUser => appUser.isAdmin);
+  }
+}
+```
+
+- update routing
+
+```javascript
+...
+{
+  path: 'admin/products',
+  component: AdminProductsComponent,
+  canActivate : [ AuthGuardService, AdminAuthGuardService ]
+},
+{
+  path: 'admin/orders',
+  component: AdminOrdersComponent,
+  canActivate : [ AuthGuardService, AdminAuthGuardService  ]
+}
+...
+```
