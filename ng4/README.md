@@ -926,7 +926,7 @@ canActivate(): Observable<boolean> {
     </a>
     <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
         <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
-        <ng-container *ngIf="user.IsAdmin">
+        <ng-container *ngIf="user.isAdmin">
             <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
             <a class="dropdown-item" routerLink="/admin/products">Manage Products</a>
         </ng-container>
@@ -979,7 +979,7 @@ export class BsNavbarComponent {
     </a>
     <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
         <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
-        <ng-container *ngIf="appUser.IsAdmin">
+        <ng-container *ngIf="appUser.isAdmin">
             <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
             <a class="dropdown-item" routerLink="/admin/products">Manage Products</a>
         </ng-container>
