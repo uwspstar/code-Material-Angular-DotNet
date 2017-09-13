@@ -891,3 +891,115 @@ export class AdminAuthGuardService implements CanActivate {
 }
 ...
 ```
+
+## Step 12 : update services and navbar
+
+- update auth.service
+
+```javascript
+...
+get appUser$(): Observable<AppUser> {
+  
+  return this.user$.switchMap(user => this.userService.get(user.uid));
+}
+...
+```
+
+- update admin-auth-guard.service
+
+```javascript
+...
+canActivate(): Observable<boolean> {
+
+  return this.auth.appUser$.map(appUser => appUser.isAdmin);
+}
+...
+```
+
+- update ng-navbar
+
+```html
+...
+<li ngbDropdown *ngIf="auth.appUser$ | async as user; else anonymousUser" class="nav-item dropdown">
+    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{user.name }}
+    </a>
+    <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+        <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
+        <ng-container *ngIf="user.IsAdmin">
+            <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
+            <a class="dropdown-item" routerLink="/admin/products">Manage Products</a>
+        </ng-container>
+        <hr/>
+        <a class="dropdown-item" (click)="logout()">Log Out</a>
+    </div>
+</li>
+...
+
+NOTE : the switchMap and async may cause the infinit loop issue
+```
+
+- update ng-navbar.component
+
+```javascript
+
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth/auth.service';
+import { AppUser } from '../models/app-user';
+
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'bs-navbar',
+  templateUrl: './bs-navbar.component.html',
+  styleUrls: ['./bs-navbar.component.css']
+})
+export class BsNavbarComponent {
+
+  appUser: AppUser;
+
+  constructor(private auth: AuthService) {
+    auth.appUser$.subscribe(appUser =>  this.appUser = appUser);
+  }
+
+  logout() {
+    this.auth.logout();
+  }
+
+}
+```
+
+- update ng-navbar again with new appUser
+
+```html
+...
+<li ngbDropdown *ngIf="appUser; else anonymousUser" class="nav-item dropdown">
+    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{appUser.name }}
+    </a>
+    <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+        <a class="dropdown-item" routerLink="/my/orders">My Orders</a>
+        <ng-container *ngIf="appUser.IsAdmin">
+            <a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
+            <a class="dropdown-item" routerLink="/admin/products">Manage Products</a>
+        </ng-container>
+        <hr/>
+        <a class="dropdown-item" (click)="logout()">Log Out</a>
+    </div>
+</li>
+...
+```
+
+- update auth.service again
+
+```javascript
+...
+get appUser$(): Observable<AppUser> {
+    // the switchMap and async may cause the infinit loop issue
+    return this.user$.switchMap(user => {
+      if (user) {return this.userService.get(user.uid); }
+
+      return Observable.of(null);
+    });
+...
+```
