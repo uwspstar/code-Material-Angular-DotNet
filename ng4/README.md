@@ -1041,8 +1041,11 @@ Run > ng g c admin/product-form
         <input id="title" type="text" class="form-control">
     </div>
     <div class="form-group">
-        <label for="price">Price</label>
-        <input id="price" type="number" class="form-control">
+         <label for="price">Price</label>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input id="price" type="number" class="form-control">
+        </div>
     </div>
     <div class="form-group">
         <label for="category">Category</label>
