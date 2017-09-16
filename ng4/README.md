@@ -1031,8 +1031,11 @@ Run > ng g c admin/product-form
 },
 ...
 ```
-## Step 1 : create product-form component
+## Step 3 : create product-form component
+
 - update product-form html
+
+NOTE : [bootstrap input](https://getbootstrap.com/docs/4.0/components/input-group/)
 
 ```javascript
 <form>
@@ -1061,5 +1064,163 @@ Run > ng g c admin/product-form
 </form>
 ```
 
+## Step 4 : create category node in firebase
 
-NOTE : [bootstrap input](https://getbootstrap.com/docs/4.0/components/input-group/)
+## Step 5 : category service
+
+- create category service
+Run > ng g s category
+
+- update app.module
+```javascript
+...
+providers: [
+    AuthService,
+    AuthGuardService,
+    AdminAuthGuardService,
+    UserService,
+    CategoryService
+  ],
+...
+```
+- category.service
+
+```javascript
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
+
+@Injectable()
+export class CategoryService {
+
+  constructor(private db: AngularFireDatabase) { }
+
+  getCategories() {
+    console.log(this.db.list('/categories'));
+    return this.db.list('/categories');
+  }
+}
+
+```
+- update product-form component
+
+```javascript
+...
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+
+  constructor(categoryService: CategoryService) {
+    this.categories$ = categoryService.getCategories();
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```
+- update product-from html
+
+```html
+...
+<div class="form-group">
+    <label for="category">Category</label>
+    <select id="category" type="text" class="form-control">
+        <option value=""></option>
+        <option *ngFor="let c of categories$ | async " [value]="c.$key">{{c.name}}</option>
+    </select>
+</div>
+...
+```
+
+## Step 6 product form
+
+- update app.module, add FormsModule
+
+```javascript
+...
+imports: [
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AppRoutingModule,
+    FormsModule,
+    NgbModule.forRoot()
+  ],
+...
+```
+
+- update product-form html, add ngModel & ngForm
+
+```html
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input ngModel name="title" id="title" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input ngModel name="price" id="price" type="number" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select ngModel name="category" id="category" type="text" class="form-control">
+            <option value=""></option>
+            <option *ngFor="let c of categories$ | async " [value]="c.$key">{{c.name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image Url</label>
+        <input ngModel name="imageUrl" id="imageUrl" type="text" class="form-control">
+    </div>
+    <button class="btn btn-primary">Save</button>
+</form>
+```
+
+```
+NOTE : you may have issue : "There is no directive with “exportAs” set to “ngForm”
+
+You have to import FormsModule into not only the root AppModule, but also into every subModule that uses any angular forms directives.
+
+in our case, we need to add the FormsModule to app-routing.module
+
+// SubModule app-routing.module
+
+import { CommonModule } from '@angular/common';
+import { FormsModule }   from '@angular/forms';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,//<-- make sure you have added this.
+    RouterModule.forRoot(appRoutes)// , { enableTracing: true }) // <-- debugging purposes
+  ],
+  ....
+})
+```
+- update product-form component, ngForm save(f.value) function
+
+```javascript
+...
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+
+  constructor(categoryService: CategoryService) {
+    this.categories$ = categoryService.getCategories();
+  }
+
+  save(product) {
+    console.log(product);
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```

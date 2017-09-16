@@ -1,10 +1,11 @@
-import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
-import { AdminProductsComponent } from './admin-products/admin-products.component';
-import { ProductFormComponent } from './product-form/product-form.component';
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
+import { AdminProductsComponent } from './admin-products/admin-products.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
@@ -63,6 +64,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)// , { enableTracing: true }) // <-- debugging purposes
   ],
   exports: [
