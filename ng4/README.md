@@ -104,7 +104,7 @@ Run > npm i --save bootstrap@next
 ```
 @import '~bootstrap/dist/css/bootstrap.css';
 ```
-NOTE : [bootstrap4 siten](https://getbootstrap.com/)
+NOTE : [bootstrap4 site](https://getbootstrap.com/)
 
 ## Step 8 : import bootstrap4 nav starter templet to app.component.html
 
@@ -1058,6 +1058,5 @@ Run > ng g c admin/product-form
 </form>
 ```
 
-```
+
 NOTE : [bootstrap input](https://getbootstrap.com/docs/4.0/components/input-group/)
-```
