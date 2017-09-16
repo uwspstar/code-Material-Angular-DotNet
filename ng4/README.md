@@ -1003,3 +1003,60 @@ get appUser$(): Observable<AppUser> {
     });
 ...
 ```
+
+# Secontion 3 : Product Management
+
+## Step 1 : create product-form component
+
+```
+Run > ng g c admin/product-form
+```
+
+## Step 2 : update admin-product, router
+
+- update admin-product html
+
+```html
+<a routerLink="/admin/products/new" class="btn primary">New Products</a>
+```
+
+- update router module
+
+```javascript
+...
+{
+  path: 'admin/products/new',
+  component: ProductFormComponent,
+  canActivate: [AuthGuardService, AdminAuthGuardService]
+},
+...
+```
+- update product-form html
+
+```javascript
+<form>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input id="title" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input id="price" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" type="text" class="form-control">
+      <option value=""></option>
+    </select>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image Url</label>
+        <input id="imageUrl" type="text" class="form-control">
+    </div>
+    <button class="btn btn-primary">Save</button>
+</form>
+```
+
+```
+NOTE : [bootstrap input](https://getbootstrap.com/docs/4.0/components/input-group/)
+```
