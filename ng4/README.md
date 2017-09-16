@@ -1031,6 +1031,7 @@ Run > ng g c admin/product-form
 },
 ...
 ```
+## Step 1 : create product-form component
 - update product-form html
 
 ```javascript
