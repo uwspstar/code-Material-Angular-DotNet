@@ -1354,7 +1354,18 @@ idealy, we should not use jquery, but...
 
 ```
 
-
-
-
+- update form validation
+```javascript
+...
+<div class="alert alert-danger" *ngIf="price.touched && price.invalid">
+    <div *ngIf="price.errors.required">Price is required. </div>
+    <div *ngIf="price.errors.min">Price should be 0 or higher. </div>
+</div>
+...
+<div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
+    <div *ngIf="imageUrl.errors.required">PImage Url is required. </div>
+    <div *ngIf="imageUrl.errors.url">Please enter a valid URL </div>
+</div>
+...
+```
 
