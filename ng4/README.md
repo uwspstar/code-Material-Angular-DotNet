@@ -1268,3 +1268,48 @@ export class ProductFormComponent implements OnInit {
 }
 ...
 ```
+
+## Step 8 add customized validation product-form
+
+- add `required` to all fields
+```html
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input #title="ngModel" ngModel name="title" id="title" type="text" class="form-control" required>
+        <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+            Title is required
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input #price="ngModel" ngModel name="price" id="price" type="number" class="form-control" required>
+        </div>
+        <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
+            Price is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select #category="ngModel" ngModel name="category" id="category" type="text" class="form-control" required>
+            <option value=""></option>
+            <option *ngFor="let c of categories$ | async " [value]="c.$key">{{c.name}}</option>
+        </select>
+        <div class="alert alert-danger" *ngIf="category.touched && category.invalid">
+            Category is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image Url</label>
+        <input #imageUrl="ngModel" ngModel name="imageUrl" id="imageUrl" type="text" class="form-control" required>
+        <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
+            Image Url is required.
+        </div>
+    </div>
+    <button class="btn btn-primary">Save</button>
+</form>
+```
+
+- add more validation to all fields
