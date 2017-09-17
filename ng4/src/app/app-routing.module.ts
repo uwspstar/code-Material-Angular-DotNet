@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+
 import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
 import { AdminProductsComponent } from './admin-products/admin-products.component';
 import { ProductFormComponent } from './product-form/product-form.component';
@@ -16,6 +17,7 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './services/auth/auth-guard.service';
 import { AdminAuthGuardService } from './services/admin/admin-auth-guard.service';
+import { CustomFormsModule } from 'ng2-validation/dist';
 
 
 const appRoutes: Routes = [
@@ -65,6 +67,7 @@ const appRoutes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    CustomFormsModule,
     RouterModule.forRoot(appRoutes)// , { enableTracing: true }) // <-- debugging purposes
   ],
   exports: [

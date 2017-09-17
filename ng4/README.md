@@ -1312,4 +1312,47 @@ export class ProductFormComponent implements OnInit {
 </form>
 ```
 
-- add more validation to all fields
+## Step 9 add more validation to all fields
+
+- install ng2-validation
+
+`NOTE` [ng2-validation on githut](https://github.com/yuyang041060120/ng2-validation)
+
+```
+Run > npm install ng2-validation --save
+
+```
+`NOTE` I am using the app-routing.module, and all the form components are include inside the this app-routing.module, So, in my case, I need to include the CustomFormsModule into app-routing.module
+
+- update app-routing.module
+```javascript
+imports: [
+    CommonModule,
+    FormsModule,
+    CustomFormsModule,
+    RouterModule.forRoot(appRoutes)// , { enableTracing: true }) // <-- debugging purposes
+  ],
+```
+
+```javascript 
+if you see the error like below
+
+├── UNMET PEER DEPENDENCY jquery@>=3.0.0
+├─┬ ng2-validation@4.2.0
+│ └─┬ libphonenumber-js@0.4.31
+│   └── minimist@1.2.0
+└── UNMET PEER DEPENDENCY popper.js@^1.11.0
+
+you need to run the 
+
+Run > npm install --save popper.js angular-popper
+Run > npm install jquery@3.0.0 --save
+
+idealy, we should not use jquery, but...
+
+```
+
+
+
+
+
