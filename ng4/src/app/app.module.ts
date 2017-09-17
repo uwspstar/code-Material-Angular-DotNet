@@ -1,3 +1,4 @@
+import { ProductService } from './services/product/product.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -37,8 +38,10 @@ import { CategoryService } from './services/category/category.service';
     AuthService,
     AuthGuardService,
     AdminAuthGuardService,
-    UserService,
-    CategoryService
+    CategoryService,
+    ProductService,
+
+    UserService
   ],
   bootstrap: [AppComponent]
 })
