@@ -40,7 +40,6 @@ import { CategoryService } from './services/category/category.service';
     AdminAuthGuardService,
     CategoryService,
     ProductService,
-
     UserService
   ],
   bootstrap: [AppComponent]

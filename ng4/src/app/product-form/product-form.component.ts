@@ -11,12 +11,12 @@ export class ProductFormComponent implements OnInit {
 
   categories$;
 
-  constructor(categoryService: CategoryService, productService: ProductService) {
+  constructor(categoryService: CategoryService, private productService: ProductService) {
     this.categories$ = categoryService.getCategories();
   }
 
   save(product) {
-    console.log(product);
+    this.productService.create(product);
   }
 
   ngOnInit() {

@@ -8,34 +8,26 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - Development server
 
-```
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-```
+
 
 - Code scaffolding
 
-```
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-```
+
 
 - Build
 
-```
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-```
 
 - Running unit tests
 
-```
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-```
 
 - Running end-to-end tests
 
-```
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
-```
 
 - Further help
 
@@ -51,7 +43,7 @@ copy the configuration to src/environments/enviroment.ts page , ( .prod.ts page 
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCUmpQN17c8WI8VINP9V-d1xxqu_Z4alf0",
+    apiKey: "YOUR API KEY", // <-- your api key
     authDomain: "db2017-9dd94.firebaseapp.com",
     databaseURL: "https://db2017-9dd94.firebaseio.com",
     projectId: "db2017-9dd94",
@@ -62,15 +54,13 @@ export const environment = {
 ```
 ## Step 3 : 
 
-```
+- install firebase
 Run > npm i --save firebase@4.2.0
-```
 
 ## Step 4 : 
 
-```
+- install angular firebase
 Run > npm i --save angularfire2@4.0.0-rc.1
-```
 
 ## Step 5 : app.module.ts
 
@@ -93,10 +83,9 @@ imports: [
 
 ## Step 6 : install bootstrap4
 
-```
+- install bootstrap4
 Run > npm i --save bootstrap
 Run > npm i --save bootstrap@next
-```
 
 
 ## Step 7 : import bootstrap4 to style.css
@@ -108,10 +97,11 @@ NOTE : [bootstrap4 site](https://getbootstrap.com/)
 
 ## Step 8 : import bootstrap4 nav starter templet to app.component.html
 
-- https://getbootstrap.com/docs/4.0/examples/starter-template/
+NOTE : [bootstrap example] (https://getbootstrap.com/docs/4.0/examples/starter-template/)
 
 - at style.css page
-```
+
+```css
 body {
     padding-top: 5rem;
 }
@@ -119,14 +109,14 @@ body {
 
 ## Step 9 : create new bs-navbar component
 
-```
+- create bs-naver.component
 Run > ng g c bs-navbar
-```
 
 ## Step 10 : move navbar section to the component
 
 ## Step 11 : create following components
 
+- create components
 ```
 Run > ng g c home
 Run > ng g c products
@@ -167,24 +157,21 @@ Run > ng g c login
 
 ## Step 14 : add ng-bootstrap to dropdown in bs-navbar,and module to app.module
 
-```
 [ng-bootstrap](https://ng-bootstrap.github.io/#/home)
-```
 
-```
+- install ng-bootstrap
 Run > npm install --save @ng-bootstrap/ng-bootstrap
-```
 
-- app.module
+- update app.module
 ```javascript
+...
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-```
-
-```javascript
+...
 NgbModule.forRoot(),
+...
 ```
 
-- bs-navba
+- bs-navba html
 
 ```html
 <li ngbDropdown class="nav-item dropdown">
@@ -199,7 +186,7 @@ NgbModule.forRoot(),
 
 ## Step 15 : update dropdown in bs-navbar and app.module
 
-- html
+- update bs-navbar html
 
 ```html
 <li ngbDropdown class="nav-item dropdown">
@@ -213,7 +200,7 @@ NgbModule.forRoot(),
     </div>
 </li>
 ```
-- css
+- update css
 ```
 .dropdown-toggle{
     cursor: pointer;
@@ -222,18 +209,17 @@ NgbModule.forRoot(),
 - app.module router
 
 ```
+...
 { path:'my/orders', component:MyOrdersComponent},
-
+...
 ```
 # DEPLOYMENT ON FIREBASE 
-```
-[Deploy Your Site on Firebase](https://firebase.google.com/docs/hosting/deploying)
-```
+
+- [Deploy Your Site on Firebase](https://firebase.google.com/docs/hosting/deploying)
 
 ## Step 16 : deploy to Firebase 
 
 - install
-
 ```
 Run > npm install -g firebase-tools
 
@@ -261,17 +247,14 @@ NOTE : follow the steps
 }
 ```
 
-```
+- build 
 Run > ng build --prod
-```
-
-```
+ 
+- deploy to firebase
 Run > firebase deploy
 
-NOTE : 
-Project Console: https://console.firebase.google.com/project/db2017-9dd94/overview
-Hosting URL: https://db2017-9dd94.firebaseapp.com
-```
+- NOTE : [Project Console:] (https://console.firebase.google.com/project/db2017-9dd94/overview
+Hosting URL: https://db2017-9dd94.firebaseapp.com)
 
 # Secontion 2 : Authentication and Authorization
 
@@ -291,9 +274,7 @@ https://console.firebase.google.com/project/db2017-9dd94/authentication/provider
 </li>
 
 ...
-
-<a class="dropdown-item" (click)="logout()">Log Out</a>
-            
+<a class="dropdown-item" (click)="logout()">Log Out</a>           
 ```
 
 ## Step 3 : update login component
@@ -333,7 +314,7 @@ export class LoginComponent {
 
 - NOTE : If you see `ERROR` below, you just need to enable your `Identity Toolkit API` on [console.developers.google API Page Library](https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=db2017-9dd94&pli=1&duration=PT1H)
 
-```
+```javascript
 {
  "error": {
   "errors": [
@@ -1181,9 +1162,12 @@ imports: [
 </form>
 ```
 
-```
-NOTE : you may have issue : "There is no directive with “exportAs” set to “ngForm”
 
+- trouble shoot
+
+`NOTE` : you may have issue : "There is no directive with “exportAs” set to “ngForm”
+
+```javascript
 You have to import FormsModule into not only the root AppModule, but also into every subModule that uses any angular forms directives.
 
 in our case, we need to add the FormsModule to app-routing.module
@@ -1216,6 +1200,66 @@ export class ProductFormComponent implements OnInit {
 
   save(product) {
     console.log(product);
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```
+## Step 7 product.service
+
+- create product.service
+Run > ng g s service/product/product
+
+- update app.module
+
+```javascript
+...
+providers: [
+    AuthService,
+    AuthGuardService,
+    AdminAuthGuardService,
+    CategoryService,
+    ProductService,
+    UserService
+  ],
+...
+```
+
+- update product.service
+
+```javascript
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
+
+@Injectable()
+export class ProductService {
+
+  constructor(private db: AngularFireDatabase) { }
+
+  create(product) {
+    return this.db.list('/products').push(product);
+  }
+
+}
+```
+
+- update product-form
+
+```javascript
+...
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+
+  constructor(categoryService: CategoryService, private productService: ProductService) {
+    this.categories$ = categoryService.getCategories();
+  }
+
+  save(product) {
+    this.productService.create(product);
   }
 
   ngOnInit() {
