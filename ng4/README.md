@@ -1594,7 +1594,7 @@ import 'rxjs/add/operator/take';
 export class ProductFormComponent implements OnInit {
 
   categories$;
-  product = {}; // <-- two way binding initial value
+  product: any = {}; // <-- two way binding initial value
 
   constructor(
     private router: Router,
@@ -1626,6 +1626,8 @@ export class ProductFormComponent implements OnInit {
 }
 
 ```
+
+`NOTE` you may see the error "...Property 'title' does not exist on type '{}'. ...".  you need to update ` product: = {}; ` --> `  product: any = {}; `
 
 - update product-form html
 

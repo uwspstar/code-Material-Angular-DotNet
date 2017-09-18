@@ -12,7 +12,7 @@ import 'rxjs/add/operator/take';
 export class ProductFormComponent implements OnInit {
 
   categories$;
-  product = {}; // <-- two way binding initial value
+  product: any = {}; // <-- two way binding initial value
 
   constructor(
     private router: Router,
