@@ -1451,3 +1451,94 @@ isNumber(e) {
   }
 ...
 ```
+
+## Step 11 product list
+
+- update product-form.components
+```javascript
+...
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+
+  constructor(
+    private router: Router,
+    private categoryService: CategoryService,
+    private productService: ProductService) {
+    this.categories$ = categoryService.getCategories();
+  }
+
+  save(product) {
+    this.productService.create(product);
+    this.router.navigate(['/admin/products']);
+  }
+
+  isNumber(e) {
+    return typeof e === 'number';
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```
+
+- update product.service
+
+```javascript
+...
+getAll() {
+  return this.db.list('/products');
+}
+...
+```
+
+- update admin-product.components
+
+```javascript
+...
+export class AdminProductsComponent implements OnInit {
+
+  products$;
+
+  constructor(private productService: ProductService) {
+    this.products$ = this.productService.getAll();
+
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```
+
+- update admin-product html
+
+```html
+<p>
+    <a routerLink="/admin/products/new" class="btn primary">New Products</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products$ | async">
+            <td>{{ p.title }}</td>
+            <td>{{ p.price }}</td>
+            <td>
+                <a [routerLink]="['/admin/products/', p.$key]">Edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
+## Step 12 product CRUD
