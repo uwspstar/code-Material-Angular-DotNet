@@ -19,6 +19,10 @@ export class ProductFormComponent implements OnInit {
     this.productService.create(product);
   }
 
+  isNumber(e) {
+    return typeof e === 'number';
+  }
+
   ngOnInit() {
   }
 
