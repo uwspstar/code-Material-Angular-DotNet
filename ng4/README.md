@@ -1542,3 +1542,146 @@ export class AdminProductsComponent implements OnInit {
 ```
 
 ## Step 12 product CRUD
+
+- update app-routing.module
+```javascript
+...
+{
+    path: 'admin/products/new', // <-- order is matter
+    component: ProductFormComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'admin/products/:id',
+    component: ProductFormComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'admin/products',
+    component: AdminProductsComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'admin/orders',
+    component: AdminOrdersComponent,
+    canActivate: [AuthGuardService]
+  }
+...
+```
+
+- update product.service
+```javascript
+...
+get(productId) {
+    return this.db.object('/products/' + productId);
+}
+...
+```
+
+- update product-form component
+```javascript
+import { ProductService } from '../services/product/product.service';
+import { CategoryService } from '../services/category/category.service';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/take';
+
+@Component({
+  selector: 'app-product-form',
+  templateUrl: './product-form.component.html',
+  styleUrls: ['./product-form.component.css']
+})
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+  product = {}; // <-- two way binding initial value
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private categoryService: CategoryService,
+    private productService: ProductService) {
+
+    this.categories$ = categoryService.getCategories();
+
+    const id: string = this.route.snapshot.paramMap.get('id');
+
+    if (id) {
+      this.productService.get(id).take(1).subscribe(p => this.product = p);
+    } 
+  }
+
+  save(product) {
+    this.productService.create(product);
+    this.router.navigate(['/admin/products']);
+  }
+
+  isNumber(e) {
+    return typeof e === 'number';
+  }
+
+  ngOnInit() {
+  }
+
+}
+
+```
+
+- update product-form html
+
+```html
+<div class="row">
+    <div class="col-md-6">
+
+        <form #f="ngForm" (ngSubmit)="save(f.value)">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input #title="ngModel" [(ngModel)]="product.title" name="title" id="title" type="text" class="form-control" required>
+                <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+                    Title is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input #price="ngModel" [(ngModel)]="product.price" name="price" id="price" type="number" class="form-control" required [min]="0">
+                </div>
+                <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
+                    <div *ngIf="price.errors.required">Price is required. </div>
+                    <div *ngIf="price.errors.min">Price should be 0 or higher. </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select #category="ngModel" [(ngModel)]="product.category" name="category" id="category" type="text" class="form-control" required>
+            <option value=""></option>
+            <option *ngFor="let c of categories$ | async " [value]="c.$key">{{c.name}}</option>
+        </select>
+                <div class="alert alert-danger" *ngIf="category.touched && category.invalid">
+                    Category is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="imageUrl">Image Url</label>
+                <input #imageUrl="ngModel" [(ngModel)]="product.imageUrl" name="imageUrl" id="imageUrl" type="text" class="form-control" required url>
+                <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
+                    <div *ngIf="imageUrl.errors.required">PImage Url is required. </div>
+                    <div *ngIf="imageUrl.errors.url">Please enter a valid URL </div>
+                </div>
+            </div>
+            <button class="btn btn-primary">Save</button>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card" style="width: 20rem;">
+            <img class="card-img-top" [src]="product.imageUrl" *ngIf="product.imageUrl" alt="{{product.title}}">
+            <div class="card-body">
+                <h4 class="card-title">{{product.title}}</h4>
+                <p class="card-text">{{ isNumber(product.price) ? (product.price | currency: 'USD':true) : product.price }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+```
