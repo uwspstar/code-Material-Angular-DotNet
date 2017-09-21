@@ -30,7 +30,13 @@ export class ProductFormComponent implements OnInit {
 
   }
 
-  save(product) {
+  save(formSubmit) {
+    if (formSubmit.invalid) {
+      console.log(formSubmit);
+      return;
+    }
+    const product = formSubmit.value;
+
     this.productService.create(product);
     this.router.navigate(['/admin/products']);
   }

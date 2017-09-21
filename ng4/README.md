@@ -1541,7 +1541,7 @@ export class AdminProductsComponent implements OnInit {
 </table>
 ```
 
-## Step 12 product CRUD
+## Step 12 product Edit function
 
 - update app-routing.module
 ```javascript
@@ -1687,3 +1687,30 @@ export class ProductFormComponent implements OnInit {
     </div>
 </div>
 ```
+
+`NOTE : modify the product-form validation`
+- product-form html
+```html
+...
+<form #f="ngForm" (ngSubmit)="save(f)">
+...
+```
+
+- product-form ts file
+
+```javascript
+...
+save(formSubmit) {
+    if (formSubmit.invalid) {
+      console.log(formSubmit);
+      return;
+    }
+    const product = formSubmit.value;
+
+    this.productService.create(product);
+    this.router.navigate(['/admin/products']);
+  }
+...
+```
+
+## Step 13 product Update function
