@@ -52,7 +52,8 @@ const appRoutes: Routes = [
     path: 'admin/orders',
     component: AdminOrdersComponent,
     canActivate: [AuthGuardService]
-  }
+  },
+  { path: '**', redirectTo: '' }
 ];
 
 

@@ -1694,6 +1694,8 @@ export class ProductFormComponent implements OnInit {
 ...
 <form #f="ngForm" (ngSubmit)="save(f)">
 ...
+ <button class="btn btn-primary" [disabled]="f.invalid" type="submit">Save</button>
+...
 ```
 
 - product-form ts file
@@ -1712,5 +1714,10 @@ save(formSubmit) {
   }
 ...
 ```
-
+- update app-routing
+```
+...
+{ path: '**', redirectTo: '' }
+...
+```
 ## Step 13 product Update function
