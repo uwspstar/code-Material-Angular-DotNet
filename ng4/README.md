@@ -8,34 +8,26 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - Development server
 
-```
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-```
+
 
 - Code scaffolding
 
-```
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-```
+
 
 - Build
 
-```
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-```
 
 - Running unit tests
 
-```
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-```
 
 - Running end-to-end tests
 
-```
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
-```
 
 - Further help
 
@@ -51,7 +43,7 @@ copy the configuration to src/environments/enviroment.ts page , ( .prod.ts page 
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCUmpQN17c8WI8VINP9V-d1xxqu_Z4alf0",
+    apiKey: "YOUR API KEY", // <-- your api key
     authDomain: "db2017-9dd94.firebaseapp.com",
     databaseURL: "https://db2017-9dd94.firebaseio.com",
     projectId: "db2017-9dd94",
@@ -62,15 +54,13 @@ export const environment = {
 ```
 ## Step 3 : 
 
-```
+- install firebase
 Run > npm i --save firebase@4.2.0
-```
 
 ## Step 4 : 
 
-```
+- install angular firebase
 Run > npm i --save angularfire2@4.0.0-rc.1
-```
 
 ## Step 5 : app.module.ts
 
@@ -93,10 +83,9 @@ imports: [
 
 ## Step 6 : install bootstrap4
 
-```
+- install bootstrap4
 Run > npm i --save bootstrap
 Run > npm i --save bootstrap@next
-```
 
 
 ## Step 7 : import bootstrap4 to style.css
@@ -104,14 +93,15 @@ Run > npm i --save bootstrap@next
 ```
 @import '~bootstrap/dist/css/bootstrap.css';
 ```
-NOTE : [bootstrap4 siten](https://getbootstrap.com/)
+NOTE : [bootstrap4 site](https://getbootstrap.com/)
 
 ## Step 8 : import bootstrap4 nav starter templet to app.component.html
 
-- https://getbootstrap.com/docs/4.0/examples/starter-template/
+NOTE : [bootstrap example] (https://getbootstrap.com/docs/4.0/examples/starter-template/)
 
 - at style.css page
-```
+
+```css
 body {
     padding-top: 5rem;
 }
@@ -119,14 +109,14 @@ body {
 
 ## Step 9 : create new bs-navbar component
 
-```
+- create bs-naver.component
 Run > ng g c bs-navbar
-```
 
 ## Step 10 : move navbar section to the component
 
 ## Step 11 : create following components
 
+- create components
 ```
 Run > ng g c home
 Run > ng g c products
@@ -167,24 +157,21 @@ Run > ng g c login
 
 ## Step 14 : add ng-bootstrap to dropdown in bs-navbar,and module to app.module
 
-```
 [ng-bootstrap](https://ng-bootstrap.github.io/#/home)
-```
 
-```
+- install ng-bootstrap
 Run > npm install --save @ng-bootstrap/ng-bootstrap
-```
 
-- app.module
+- update app.module
 ```javascript
+...
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-```
-
-```javascript
+...
 NgbModule.forRoot(),
+...
 ```
 
-- bs-navba
+- bs-navba html
 
 ```html
 <li ngbDropdown class="nav-item dropdown">
@@ -199,7 +186,7 @@ NgbModule.forRoot(),
 
 ## Step 15 : update dropdown in bs-navbar and app.module
 
-- html
+- update bs-navbar html
 
 ```html
 <li ngbDropdown class="nav-item dropdown">
@@ -213,7 +200,7 @@ NgbModule.forRoot(),
     </div>
 </li>
 ```
-- css
+- update css
 ```
 .dropdown-toggle{
     cursor: pointer;
@@ -222,18 +209,17 @@ NgbModule.forRoot(),
 - app.module router
 
 ```
+...
 { path:'my/orders', component:MyOrdersComponent},
-
+...
 ```
 # DEPLOYMENT ON FIREBASE 
-```
-[Deploy Your Site on Firebase](https://firebase.google.com/docs/hosting/deploying)
-```
+
+- [Deploy Your Site on Firebase](https://firebase.google.com/docs/hosting/deploying)
 
 ## Step 16 : deploy to Firebase 
 
 - install
-
 ```
 Run > npm install -g firebase-tools
 
@@ -261,17 +247,14 @@ NOTE : follow the steps
 }
 ```
 
-```
+- build 
 Run > ng build --prod
-```
-
-```
+ 
+- deploy to firebase
 Run > firebase deploy
 
-NOTE : 
-Project Console: https://console.firebase.google.com/project/db2017-9dd94/overview
-Hosting URL: https://db2017-9dd94.firebaseapp.com
-```
+- NOTE : [Project Console:] (https://console.firebase.google.com/project/db2017-9dd94/overview
+Hosting URL: https://db2017-9dd94.firebaseapp.com)
 
 # Secontion 2 : Authentication and Authorization
 
@@ -291,9 +274,7 @@ https://console.firebase.google.com/project/db2017-9dd94/authentication/provider
 </li>
 
 ...
-
-<a class="dropdown-item" (click)="logout()">Log Out</a>
-            
+<a class="dropdown-item" (click)="logout()">Log Out</a>           
 ```
 
 ## Step 3 : update login component
@@ -333,7 +314,7 @@ export class LoginComponent {
 
 - NOTE : If you see `ERROR` below, you just need to enable your `Identity Toolkit API` on [console.developers.google API Page Library](https://console.developers.google.com/apis/api/identitytoolkit.googleapis.com/overview?project=db2017-9dd94&pli=1&duration=PT1H)
 
-```
+```javascript
 {
  "error": {
   "errors": [
@@ -1003,3 +984,740 @@ get appUser$(): Observable<AppUser> {
     });
 ...
 ```
+
+# Secontion 3 : Product Management
+
+## Step 1 : create product-form component
+
+```
+Run > ng g c admin/product-form
+```
+
+## Step 2 : update admin-product, router
+
+- update admin-product html
+
+```html
+<a routerLink="/admin/products/new" class="btn primary">New Products</a>
+```
+
+- update router module
+
+```javascript
+...
+{
+  path: 'admin/products/new',
+  component: ProductFormComponent,
+  canActivate: [AuthGuardService, AdminAuthGuardService]
+},
+...
+```
+## Step 3 : create product-form component
+
+- update product-form html
+
+NOTE : [bootstrap input](https://getbootstrap.com/docs/4.0/components/input-group/)
+
+```javascript
+<form>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input id="title" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+         <label for="price">Price</label>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input id="price" type="number" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" type="text" class="form-control">
+      <option value=""></option>
+    </select>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image Url</label>
+        <input id="imageUrl" type="text" class="form-control">
+    </div>
+    <button class="btn btn-primary">Save</button>
+</form>
+```
+
+## Step 4 : create category node in firebase
+
+## Step 5 : category service
+
+- create category service
+Run > ng g s category
+
+- update app.module
+```javascript
+...
+providers: [
+    AuthService,
+    AuthGuardService,
+    AdminAuthGuardService,
+    UserService,
+    CategoryService
+  ],
+...
+```
+- category.service
+
+```javascript
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
+
+@Injectable()
+export class CategoryService {
+
+  constructor(private db: AngularFireDatabase) { }
+
+  getCategories() {
+    console.log(this.db.list('/categories'));
+    return this.db.list('/categories');
+  }
+}
+
+```
+- update product-form component
+
+```javascript
+...
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+
+  constructor(categoryService: CategoryService) {
+    this.categories$ = categoryService.getCategories();
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```
+- update product-from html
+
+```html
+...
+<div class="form-group">
+    <label for="category">Category</label>
+    <select id="category" type="text" class="form-control">
+        <option value=""></option>
+        <option *ngFor="let c of categories$ | async " [value]="c.$key">{{c.name}}</option>
+    </select>
+</div>
+...
+```
+
+## Step 6 product form
+
+- update app.module, add FormsModule
+
+```javascript
+...
+imports: [
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AppRoutingModule,
+    FormsModule,
+    NgbModule.forRoot()
+  ],
+...
+```
+
+- update product-form html, add ngModel & ngForm
+
+```html
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input ngModel name="title" id="title" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input ngModel name="price" id="price" type="number" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select ngModel name="category" id="category" type="text" class="form-control">
+            <option value=""></option>
+            <option *ngFor="let c of categories$ | async " [value]="c.$key">{{c.name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image Url</label>
+        <input ngModel name="imageUrl" id="imageUrl" type="text" class="form-control">
+    </div>
+    <button class="btn btn-primary">Save</button>
+</form>
+```
+
+
+- trouble shoot
+
+`NOTE` : you may have issue : "There is no directive with “exportAs” set to “ngForm”
+
+```javascript
+You have to import FormsModule into not only the root AppModule, but also into every subModule that uses any angular forms directives.
+
+in our case, we need to add the FormsModule to app-routing.module
+
+// SubModule app-routing.module
+
+import { CommonModule } from '@angular/common';
+import { FormsModule }   from '@angular/forms';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,//<-- make sure you have added this.
+    RouterModule.forRoot(appRoutes)// , { enableTracing: true }) // <-- debugging purposes
+  ],
+  ....
+})
+```
+- update product-form component, ngForm save(f.value) function
+
+```javascript
+...
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+
+  constructor(categoryService: CategoryService) {
+    this.categories$ = categoryService.getCategories();
+  }
+
+  save(product) {
+    console.log(product);
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```
+## Step 7 product.service
+
+- create product.service
+Run > ng g s service/product/product
+
+- update app.module
+
+```javascript
+...
+providers: [
+    AuthService,
+    AuthGuardService,
+    AdminAuthGuardService,
+    CategoryService,
+    ProductService,
+    UserService
+  ],
+...
+```
+
+- update product.service
+
+```javascript
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
+
+@Injectable()
+export class ProductService {
+
+  constructor(private db: AngularFireDatabase) { }
+
+  create(product) {
+    return this.db.list('/products').push(product);
+  }
+
+}
+```
+
+- update product-form
+
+```javascript
+...
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+
+  constructor(categoryService: CategoryService, private productService: ProductService) {
+    this.categories$ = categoryService.getCategories();
+  }
+
+  save(product) {
+    this.productService.create(product);
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```
+
+## Step 8 add customized validation product-form
+
+- add `required` to all fields
+```html
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input #title="ngModel" ngModel name="title" id="title" type="text" class="form-control" required>
+        <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+            Title is required
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input #price="ngModel" ngModel name="price" id="price" type="number" class="form-control" required>
+        </div>
+        <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
+            Price is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select #category="ngModel" ngModel name="category" id="category" type="text" class="form-control" required>
+            <option value=""></option>
+            <option *ngFor="let c of categories$ | async " [value]="c.$key">{{c.name}}</option>
+        </select>
+        <div class="alert alert-danger" *ngIf="category.touched && category.invalid">
+            Category is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image Url</label>
+        <input #imageUrl="ngModel" ngModel name="imageUrl" id="imageUrl" type="text" class="form-control" required>
+        <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
+            Image Url is required.
+        </div>
+    </div>
+    <button class="btn btn-primary">Save</button>
+</form>
+```
+
+## Step 9 add more validation to all fields
+
+- install ng2-validation
+
+`NOTE` [ng2-validation on githut](https://github.com/yuyang041060120/ng2-validation)
+
+```
+Run > npm install ng2-validation --save
+
+```
+`NOTE` I am using the app-routing.module, and all the form components are include inside the this app-routing.module, So, in my case, I need to include the CustomFormsModule into app-routing.module
+
+- update app-routing.module
+```javascript
+imports: [
+    CommonModule,
+    FormsModule,
+    CustomFormsModule,
+    RouterModule.forRoot(appRoutes)// , { enableTracing: true }) // <-- debugging purposes
+  ],
+```
+
+- update product-form
+
+```javascript 
+if you see the error like below
+
+├── UNMET PEER DEPENDENCY jquery@>=3.0.0
+├─┬ ng2-validation@4.2.0
+│ └─┬ libphonenumber-js@0.4.31
+│   └── minimist@1.2.0
+└── UNMET PEER DEPENDENCY popper.js@^1.11.0
+
+you need to run the 
+
+Run > npm install --save popper.js angular-popper
+Run > npm install jquery@3.0.0 --save
+
+idealy, we should not use jquery, but...
+
+```
+
+- update form validation
+```javascript
+...
+<div class="alert alert-danger" *ngIf="price.touched && price.invalid">
+    <div *ngIf="price.errors.required">Price is required. </div>
+    <div *ngIf="price.errors.min">Price should be 0 or higher. </div>
+</div>
+...
+<div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
+    <div *ngIf="imageUrl.errors.required">PImage Url is required. </div>
+    <div *ngIf="imageUrl.errors.url">Please enter a valid URL </div>
+</div>
+...
+```
+
+## Step 10 product preview
+
+- update product-form html
+
+`NOTE` [bootstrap cards](https://getbootstrap.com/docs/4.0/components/card/)
+
+```html
+<div class="row">
+    <div class="col-md-6">
+
+        <form #f="ngForm" (ngSubmit)="save(f.value)">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input #title="ngModel" ngModel name="title" id="title" type="text" class="form-control" required>
+                <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+                    Title is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input #price="ngModel" ngModel name="price" id="price" type="number" class="form-control" required [min]="0">
+                </div>
+                <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
+                    <div *ngIf="price.errors.required">Price is required. </div>
+                    <div *ngIf="price.errors.min">Price should be 0 or higher. </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select #category="ngModel" ngModel name="category" id="category" type="text" class="form-control" required>
+            <option value=""></option>
+            <option *ngFor="let c of categories$ | async " [value]="c.$key">{{c.name}}</option>
+        </select>
+                <div class="alert alert-danger" *ngIf="category.touched && category.invalid">
+                    Category is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="imageUrl">Image Url</label>
+                <input #imageUrl="ngModel" ngModel name="imageUrl" id="imageUrl" type="text" class="form-control" required url>
+                <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
+                    <div *ngIf="imageUrl.errors.required">PImage Url is required. </div>
+                    <div *ngIf="imageUrl.errors.url">Please enter a valid URL </div>
+                </div>
+            </div>
+            <button class="btn btn-primary">Save</button>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card" style="width: 20rem;">
+            <img class="card-img-top" [src]="imageUrl.value" alt="{{title.value}}">
+            <div class="card-body">
+                <h4 class="card-title">{{title.value}}</h4>
+                <p class="card-text">{{ isNumber(price.value) ? (price.value | currency: 'USD':true) : price.value }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+```
+
+`NOTE` In my case, my code is facing the error "InvalidPipeArgument: '' for pipe 'CurrencyPipe'     at invalidPipeArgumen", so, I have to update html and compone  
+
+- html
+```html
+...
+<p class="card-text">{{ price.value | currency: 'USD':true }}</p>
+ ==>
+<p class="card-text">{{ isNumber(price.value) ? (price.value | currency: 'USD':true) : price.value }}</p>
+...
+```
+- componet
+```javascript
+...
+isNumber(e) {
+    return typeof e === 'number';
+  }
+...
+```
+
+## Step 11 product list
+
+- update product-form.components
+```javascript
+...
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+
+  constructor(
+    private router: Router,
+    private categoryService: CategoryService,
+    private productService: ProductService) {
+    this.categories$ = categoryService.getCategories();
+  }
+
+  save(product) {
+    this.productService.create(product);
+    this.router.navigate(['/admin/products']);
+  }
+
+  isNumber(e) {
+    return typeof e === 'number';
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```
+
+- update product.service
+
+```javascript
+...
+getAll() {
+  return this.db.list('/products');
+}
+...
+```
+
+- update admin-product.components
+
+```javascript
+...
+export class AdminProductsComponent implements OnInit {
+
+  products$;
+
+  constructor(private productService: ProductService) {
+    this.products$ = this.productService.getAll();
+
+  }
+
+  ngOnInit() {
+  }
+
+}
+...
+```
+
+- update admin-product html
+
+```html
+<p>
+    <a routerLink="/admin/products/new" class="btn primary">New Products</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products$ | async">
+            <td>{{ p.title }}</td>
+            <td>{{ p.price }}</td>
+            <td>
+                <a [routerLink]="['/admin/products/', p.$key]">Edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
+## Step 12 product Edit function
+
+- update app-routing.module
+```javascript
+...
+{
+    path: 'admin/products/new', // <-- order is matter
+    component: ProductFormComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'admin/products/:id',
+    component: ProductFormComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'admin/products',
+    component: AdminProductsComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: 'admin/orders',
+    component: AdminOrdersComponent,
+    canActivate: [AuthGuardService]
+  }
+...
+```
+
+- update product.service
+```javascript
+...
+get(productId) {
+    return this.db.object('/products/' + productId);
+}
+...
+```
+
+- update product-form component
+```javascript
+import { ProductService } from '../services/product/product.service';
+import { CategoryService } from '../services/category/category.service';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/take';
+
+@Component({
+  selector: 'app-product-form',
+  templateUrl: './product-form.component.html',
+  styleUrls: ['./product-form.component.css']
+})
+export class ProductFormComponent implements OnInit {
+
+  categories$;
+  product: any = {}; // <-- two way binding initial value
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private categoryService: CategoryService,
+    private productService: ProductService) {
+
+    this.categories$ = categoryService.getCategories();
+
+    const id: string = this.route.snapshot.paramMap.get('id');
+
+    if (id) {
+      this.productService.get(id).take(1).subscribe(p => this.product = p);
+    } 
+  }
+
+  save(product) {
+    this.productService.create(product);
+    this.router.navigate(['/admin/products']);
+  }
+
+  isNumber(e) {
+    return typeof e === 'number';
+  }
+
+  ngOnInit() {
+  }
+
+}
+
+```
+
+`NOTE` you may see the error "...Property 'title' does not exist on type '{}'. ...".  you need to update ` product: = {}; ` --> `  product: any = {}; `
+
+- update product-form html
+
+```html
+<div class="row">
+    <div class="col-md-6">
+
+        <form #f="ngForm" (ngSubmit)="save(f.value)">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input #title="ngModel" [(ngModel)]="product.title" name="title" id="title" type="text" class="form-control" required>
+                <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+                    Title is required
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input #price="ngModel" [(ngModel)]="product.price" name="price" id="price" type="number" class="form-control" required [min]="0">
+                </div>
+                <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
+                    <div *ngIf="price.errors.required">Price is required. </div>
+                    <div *ngIf="price.errors.min">Price should be 0 or higher. </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select #category="ngModel" [(ngModel)]="product.category" name="category" id="category" type="text" class="form-control" required>
+            <option value=""></option>
+            <option *ngFor="let c of categories$ | async " [value]="c.$key">{{c.name}}</option>
+        </select>
+                <div class="alert alert-danger" *ngIf="category.touched && category.invalid">
+                    Category is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="imageUrl">Image Url</label>
+                <input #imageUrl="ngModel" [(ngModel)]="product.imageUrl" name="imageUrl" id="imageUrl" type="text" class="form-control" required url>
+                <div class="alert alert-danger" *ngIf="imageUrl.touched && imageUrl.invalid">
+                    <div *ngIf="imageUrl.errors.required">PImage Url is required. </div>
+                    <div *ngIf="imageUrl.errors.url">Please enter a valid URL </div>
+                </div>
+            </div>
+            <button class="btn btn-primary">Save</button>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card" style="width: 20rem;">
+            <img class="card-img-top" [src]="product.imageUrl" *ngIf="product.imageUrl" alt="{{product.title}}">
+            <div class="card-body">
+                <h4 class="card-title">{{product.title}}</h4>
+                <p class="card-text">{{ isNumber(product.price) ? (product.price | currency: 'USD':true) : product.price }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+`NOTE : modify the product-form validation`
+- product-form html
+```html
+...
+<form #f="ngForm" (ngSubmit)="save(f)">
+...
+ <button class="btn btn-primary" [disabled]="f.invalid" type="submit">Save</button>
+...
+```
+
+- product-form ts file
+
+```javascript
+...
+save(formSubmit) {
+    if (formSubmit.invalid) {
+      console.log(formSubmit);
+      return;
+    }
+    const product = formSubmit.value;
+
+    this.productService.create(product);
+    this.router.navigate(['/admin/products']);
+  }
+...
+```
+- update app-routing
+```
+...
+{ path: '**', redirectTo: '' }
+...
+```
+## Step 13 product Update function
