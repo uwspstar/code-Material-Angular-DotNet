@@ -1,0 +1,6 @@
+C:\Demo\Demo2017\FuntionalCSharp\FuntionalCSharp\bin\Debug\FuntionalCSharp.exe.config
+C:\Demo\Demo2017\FuntionalCSharp\FuntionalCSharp\bin\Debug\FuntionalCSharp.exe
+C:\Demo\Demo2017\FuntionalCSharp\FuntionalCSharp\bin\Debug\FuntionalCSharp.pdb
+C:\Demo\Demo2017\FuntionalCSharp\FuntionalCSharp\obj\Debug\FuntionalCSharp.csprojResolveAssemblyReference.cache
+C:\Demo\Demo2017\FuntionalCSharp\FuntionalCSharp\obj\Debug\FuntionalCSharp.exe
+C:\Demo\Demo2017\FuntionalCSharp\FuntionalCSharp\obj\Debug\FuntionalCSharp.pdb
