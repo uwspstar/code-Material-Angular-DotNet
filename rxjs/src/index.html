@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rxjs</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <script>
+        /*
+
+                        function TestFun(a, b) {
+
+
+                            function testOne() {
+                                console.log("test one : " + (a - b));
+                            }
+
+                            function testTwo() {
+                                console.log("test two : " + a + b);
+                            }
+
+                            testOne();
+                            testTwo();
+
+                            TestFun = testOne;
+
+                            return testTwo();
+
+                        }
+
+
+                       
+                        console.log("First Run");
+                        TestFun(1, 2);
+
+                        console.log("Second Run");
+                        TestFun(1, 2);
+
+                        console.log("Third Run");
+                        TestFun(1, 2);
+
+
+                      
+
+                        First Run
+                        test one : -1
+                        test two : 12
+                        test two : 12
+                        Second Run
+                        test one : -1
+                        Third Run
+                        test one : -1
+                        
+                        */
+
+
+        //IIFE
+        (
+            function(a, b) {
+                alert("hi -- IIFE" + a + b);
+            }
+        )(2, 3, 4, 5);
+    </script>
+
+
+    <app-root></app-root>
+</body>
+
+</html>
