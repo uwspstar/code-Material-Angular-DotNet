@@ -28,14 +28,20 @@ Run > npm install bootstrap@4.0.0-alpha.6
 
 - Or, use CDN https://v4-alpha.getbootstrap.com/getting-started/download/#bootstrap-cdn
 
+- import bootstrap4 to style.css
 
-- start with components page : 
+```
+@import '~bootstrap/dist/css/bootstrap.css';
+```
+
+## Start with components page : 
 
 `navbar`
 https://v4-alpha.getbootstrap.com/components/navbar/
 
 
-
+`jumbotron`
+https://v4-alpha.getbootstrap.com/components/jumbotron/
 
 
 # Demo1
