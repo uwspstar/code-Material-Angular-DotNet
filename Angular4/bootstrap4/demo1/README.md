@@ -29,6 +29,15 @@ Run > npm install bootstrap@4.0.0-alpha.6
 - Or, use CDN https://v4-alpha.getbootstrap.com/getting-started/download/#bootstrap-cdn
 
 
+- start with components page : 
+
+`navbar`
+https://v4-alpha.getbootstrap.com/components/navbar/
+
+
+
+
+
 # Demo1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
