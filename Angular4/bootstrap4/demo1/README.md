@@ -4,8 +4,30 @@
 
 ```
 Run > npm i --save bootstrap 
-Run > npm i --save bootstrap@next
 ```
+`NOTE : in my case, the @3.3.7 install, so I need to Run`
+
+```
+Run > npm i --save bootstrap@next to get @4.0.0-beta
+```
+
+`NOTE` : you may see "npm WARN bootstrap@4.0.0-beta requires a peer of jquery@>=3.0.0 but nonewas installed."
+
+```
+"UNMET PEER DEPENDENCY jquery@>=3.0.0" 
+"UNMET PEER DEPENDENCY popper.js@^1.11.0"
+
+without install jquery@>=3.0.0 you still can run, but suggest to upgrade it
+```
+
+- go to https://v4-alpha.getbootstrap.com/getting-started/download/#npm
+
+```
+Run > npm install bootstrap@4.0.0-alpha.6
+```
+
+- Or, use CDN
+https://v4-alpha.getbootstrap.com/getting-started/download/#bootstrap-cdn
 
 
 # Demo1
