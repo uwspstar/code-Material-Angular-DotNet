@@ -26,8 +26,7 @@ without install jquery@>=3.0.0 you still can run, but suggest to upgrade it
 Run > npm install bootstrap@4.0.0-alpha.6
 ```
 
-- Or, use CDN
-https://v4-alpha.getbootstrap.com/getting-started/download/#bootstrap-cdn
+- Or, use CDN https://v4-alpha.getbootstrap.com/getting-started/download/#bootstrap-cdn
 
 
 # Demo1
