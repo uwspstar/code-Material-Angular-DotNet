@@ -20,18 +20,25 @@ Run > npm i --save bootstrap@next to get @4.0.0-beta
 without install jquery@>=3.0.0 you still can run, but suggest to upgrade it
 ```
 
-- go to https://v4-alpha.getbootstrap.com/getting-started/download/#npm
-
 ```
-Run > npm install bootstrap@4.0.0-alpha.6
+Run > npm install jquery
 ```
-
-- Or, use CDN https://v4-alpha.getbootstrap.com/getting-started/download/#bootstrap-cdn
-
 - import bootstrap4 to style.css
 
 ```
 @import '~bootstrap/dist/css/bootstrap.css';
+```
+
+- dummy content
+```
+user http://www.blindtextgenerator.com/lorem-ipsum to help you generate dummy content
+```
+
+- embed the media to iframe
+```html
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ONPqeHJShdQ" frameborder="0"></iframe>
+</div>
 ```
 
 ## Start with components page : 
@@ -43,6 +50,56 @@ https://v4-alpha.getbootstrap.com/components/navbar/
 `jumbotron`
 https://v4-alpha.getbootstrap.com/components/jumbotron/
 
+#deploy to firebase
+- config on firebase
+`copy the configuration to src/environments/enviroment.ts page , ( .prod.ts page also)`
+```javascript
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "YOUR API KEY", // <-- your api key
+    authDomain: "db2017-9dd94.firebaseapp.com",
+    databaseURL: "https://db2017-9dd94.firebaseio.com",
+    projectId: "db2017-9dd94",
+    storageBucket: "",
+    messagingSenderId: "759738631975"
+  }
+};
+```
+
+- install firebase 
+```
+Run > npm i --save firebase@4.2.0
+```
+
+
+- install angular firebase 
+```
+Run > npm i --save angularfire2@4.0.0-rc.1
+```
+
+- add module to app.module.ts
+
+```javascript
+...
+import { AngularFireModule } from 'angularfire2'
+import { AngularFireDatabaseModule } from 'angularfire2/database'
+import { AngularFireAuthModule } from 'angularfire2/Auth'
+import { environment } from "../environments/environment";
+...
+```
+```json
+{
+    "hosting": {
+        "public": "dist",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }
+}
+```
 
 # Demo1
 
