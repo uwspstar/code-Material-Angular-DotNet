@@ -50,6 +50,10 @@ https://v4-alpha.getbootstrap.com/components/navbar/
 `jumbotron`
 https://v4-alpha.getbootstrap.com/components/jumbotron/
 
+`newsletter`
+
+`registerform`
+
 #deploy to firebase
 - config on firebase
 `copy the configuration to src/environments/enviroment.ts page , ( .prod.ts page also)`
@@ -88,6 +92,8 @@ import { AngularFireAuthModule } from 'angularfire2/Auth'
 import { environment } from "../environments/environment";
 ...
 ```
+
+- modify firebase.json
 ```json
 {
     "hosting": {
