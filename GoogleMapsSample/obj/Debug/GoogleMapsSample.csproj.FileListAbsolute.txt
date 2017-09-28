@@ -1,0 +1,7 @@
+C:\CodePlexCodeSample\Samples\HttpClient\GoogleMapsSample\obj\Debug\GoogleMapsSample.csproj.CoreCompileInputs.cache
+C:\CodePlexCodeSample\Samples\HttpClient\GoogleMapsSample\bin\Debug\GoogleMapsSample.exe.config
+C:\CodePlexCodeSample\Samples\HttpClient\GoogleMapsSample\bin\Debug\GoogleMapsSample.exe
+C:\CodePlexCodeSample\Samples\HttpClient\GoogleMapsSample\bin\Debug\GoogleMapsSample.pdb
+C:\CodePlexCodeSample\Samples\HttpClient\GoogleMapsSample\obj\Debug\GoogleMapsSample.csprojResolveAssemblyReference.cache
+C:\CodePlexCodeSample\Samples\HttpClient\GoogleMapsSample\obj\Debug\GoogleMapsSample.exe
+C:\CodePlexCodeSample\Samples\HttpClient\GoogleMapsSample\obj\Debug\GoogleMapsSample.pdb
