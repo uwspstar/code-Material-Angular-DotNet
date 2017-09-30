@@ -1,6 +1,11 @@
 # Angular4NgRxStore
 
+## What Problem try to solve ?
 
+#### Facebook Chat Problem   - Multiple view models for the same business data
+- In user interfaces where we need to display multiple View Models of the same domain data (the Model), how are we going to keep everything in sync?
+
+#### Facebook Chat Problem   - the shared data ownership/data encapsulation problem
 ## Simplified version of the Facebook chat
 
 ```javascript
