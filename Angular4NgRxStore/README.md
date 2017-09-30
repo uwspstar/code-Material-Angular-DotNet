@@ -8,6 +8,16 @@
 #### Facebook Chat Problem   - the shared data ownership/data encapsulation problem
 ## Simplified version of the Facebook chat
 
+#### Facebook Chat Problem   - Avoiding Ajax "spinner" applications
+
+## Solution
+
+#### Store application architecture pattern as a solution to these multiple problems
+
+- "bring more real data to the frontend". What does this mean? This is actually the `core of the store solution`.
+
+`***** It means that instead of transforming the Model into the View Model on the server as its usually done, let's instead copy the Model to the client- side, keep it an in-memory client database and derive View Models last second on the client side instead of doing so upfront on the server. *****`
+
 ```javascript
 
 export interface Thread {

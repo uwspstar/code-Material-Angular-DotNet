@@ -20,7 +20,7 @@ export interface ThreadSummaryVM {
 }
 
 export interface MessageVM {
-  d: number;
+  id: number;
   text: string;
   participantName: string;
   timestamp: number;
