@@ -30,6 +30,13 @@ $ git branch
 // Create a new branch named issue1 based on the current branch * master
 $ git branch issue1
 
+// Switched to branch 'issue1', run git branch, the * issue1
+$ git checkout issue1
+
+// A new branch will be created and you will be switched over thereafter $ git checkout -b issue2
+$ git checkout -b issue2
+
+
 
 ```
 
