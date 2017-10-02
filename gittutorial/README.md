@@ -3,14 +3,14 @@ Highly Recommend to Check out Details in
 [Git Beginner's Guide for Dummies](https://backlogtool.com/git-tutorial/en/contents/)
 
 ## Installing Git
-[Source Tree](http://www.sourcetreeapp.com/)
+- [Source Tree](http://www.sourcetreeapp.com/)
 
-- Push a remote repository
-[Push a remote repository] (https://backlogtool.com/git-tutorial/en/intro/intro4_2.html)
-- Clone a remote repository
-[Clone a remote repository] (https://backlogtool.com/git-tutorial/en/intro/intro4_3.html)
-- Pull from a remote repository
-[Pull from a remote repository] (https://backlogtool.com/git-tutorial/en/intro/intro4_4.html)
+
+- [Push a remote repository](https://backlogtool.com/git-tutorial/en/intro/intro4_2.html)
+
+- [Clone a remote repository](https://backlogtool.com/git-tutorial/en/intro/intro4_3.html)
+
+- [Pull from a remote repository](https://backlogtool.com/git-tutorial/en/intro/intro4_4.html)
 
 - origin/master
 Points to the "master" branch of "origin" which is typically the remote repository.
