@@ -36,6 +36,23 @@ $ git checkout issue1
 // A new branch will be created and you will be switched over thereafter $ git checkout -b issue2
 $ git checkout -b issue2
 
+// Merge "issue1" with "master"
+// To merge commits into the master branch, 
+// let's now switch over to the master branch.
+$ git checkout master
+
+//
+$ git merge issue1
+
+
+
+
+
+
+
+
+
+
 
 
 ```
