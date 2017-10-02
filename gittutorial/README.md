@@ -47,9 +47,9 @@ HEAD is used by Git to represent the current snapshot/position of a branch. For 
 - Rebase does not move the position of "master". In any case, you will be able to just do a fast-forward or a clean merge from bugfix to master after rebasing.
 
 
-```
-If you want to keep your revision history simple, you can do the following :
 
+`If you want to keep your revision history simple, you can do the following :`
+```
 step 1 : 
 Use rebase on your topic branch when you want to pull the latest change 
 from the integration branch.
