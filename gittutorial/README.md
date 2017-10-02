@@ -2,6 +2,21 @@
 Highly Recommend to Check out Details in 
 [Git Beginner's Guide for Dummies](https://backlogtool.com/git-tutorial/en/contents/)
 
+
+
+```javascript
+Run > mkdir tutorial
+Run > cd tutorial
+Run > git init
+
+Run > touch foo.txt //Create a new file named "myfile.txt" in the tutorial directory and commit. same as " >> foo.txt"
+
+Run > rm foo.txt  // remove file
+
+
+
+```
+
 ## Installing Git
 - [Source Tree](http://www.sourcetreeapp.com/)
 
@@ -28,18 +43,33 @@ Points to the "master" branch of our local repository.
 
 ### Braching flow
 
+- Main branch
 ```
-. Main branch
-. Feature branch (topic branch)
-. Release branch
-. Hot fix branch
+The main branch consists of the master and develop branches.
 ```
+- Feature branch 
+```
+topic branch, The feature branch works like a topic branch which we have covered earlier.
+```
+- Release branch
+```
+By convention, release branch names normally start with the prefix "release-".
+Only bug fix and release related issues should be addressed on this branch.
+```
+- Hot fix branch
+```
+By convention, hot fix branch names normally start with the prefix "hotfix-".
+When you need to add an important fix to your production codebase quickly, 
+you would want to create a Hot fix branch off the master branch.
+```
+
 - Before starting on the bug fix, you would want to create a new branch based off the integration branch.
 - When you ready to release the bug fix, merge the bug fix topic branch into the integration branch.
 
-```
-There are two options to go about doing this.
 
+`There are two options to go about doing this.`
+
+```
 The first is to merge the integration branch that includes commit "X" with the current branch.
 
 The second option is to rebase the current branch to the integration branch that includes commit "X".
