@@ -44,7 +44,8 @@ $ git checkout master
 //
 $ git merge issue1
 
-
+//Delete branch
+$ git branch -d issue1
 
 
 
