@@ -49,14 +49,15 @@ HEAD is used by Git to represent the current snapshot/position of a branch. For 
 
 
 `If you want to keep your revision history simple, you can do the following :`
-```
-step 1 : 
-Use rebase on your topic branch when you want to pull the latest change 
+
+`step 1 :` 
+
+- Use rebase on your topic branch when you want to pull the latest change 
 from the integration branch.
 
-step 2 :
-If you want to merge the change from your topic branch to the integration branch, 
+`step 2 :`
+
+- If you want to merge the change from your topic branch to the integration branch, 
 rebase the topic branch onto the integration branch first. 
 After which, merge the changes from the topic branch into the integration branch. 
 This will be a fast-forward merge with no extra merge commits being created.
-```
