@@ -5,14 +5,30 @@ Highly Recommend to Check out Details in
 
 
 ```javascript
-Run > mkdir tutorial
-Run > cd tutorial
-Run > git init
+// Create a directory
+$ mkdir tutorial
+$ cd tutorial
 
-Run > touch foo.txt //Create a new file named "myfile.txt" in the tutorial directory and commit. same as " >> foo.txt"
+// initial Git
+$ git init
 
-Run > rm foo.txt  // remove file
+// Create a new file
+$ touch foo.txt  //same as " >> foo.txt"
 
+// Remove file
+$ rm foo.txt  
+
+// Add file to stage
+$ git add myfile.txt
+
+// Commit changes
+$ git commit -m "first commit"
+
+// Check current branch * master
+$ git branch
+
+// Create a new branch named issue1 based on the current branch * master
+$ git branch issue1
 
 
 ```
