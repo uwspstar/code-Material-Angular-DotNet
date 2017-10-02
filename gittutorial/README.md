@@ -41,10 +41,10 @@ $ git checkout -b issue2
 // let's now switch over to the master branch.
 $ git checkout master
 
-//
+// Merge "issue1" with "master"
 $ git merge issue1
 
-//Delete branch
+// Delete branch
 $ git branch -d issue1
 
 
