@@ -61,13 +61,6 @@ $ git rebase master
 $ git add myfile.txt
 $ git rebase --continue
 
-
-
-
-
-
-
-
 ```
 
 ## Installing Git
