@@ -3,7 +3,10 @@ Highly Recommend to Check out Details in
 [Git Beginner's Guide for Dummies](https://backlogtool.com/git-tutorial/en/contents/)
 
 
+[Quick start Example : Work in parallel](https://backlogtool.com/git-tutorial/en/stepup/stepup2_6.html)
 
+
+[Reference](https://backlogtool.com/git-tutorial/en/reference/)
 ```javascript
 // Create a directory
 $ mkdir tutorial
@@ -41,13 +44,22 @@ $ git checkout -b issue2
 // let's now switch over to the master branch.
 $ git checkout master
 
-// Merge "issue1" with "master"
+// Merge "issue1" into "master"
 $ git merge issue1
+
+// Merge "issue3" into "master"
+$git merge issue3
 
 // Delete branch
 $ git branch -d issue1
 
-
+// Rebase branch
+$ git checkout issue3 
+// Switched to branch 'issue3
+$ git rebase master 
+// When a conflict occurs during the rebase, you will have to resolve it immediately in order to resume the rebase operation.
+$ git add myfile.txt
+$ git rebase --continue
 
 
 
@@ -180,3 +192,9 @@ from the integration branch.
 rebase the topic branch onto the integration branch first. 
 After which, merge the changes from the topic branch into the integration branch. 
 This will be a fast-forward merge with no extra merge commits being created.
+
+### Fetching
+When you execute a pull, the changes from the remote branch will automatically be merged into your current local branch. If what you want is just to obtain the remote changes and not have them merged into your current local branch, you can do so by executing a fetch command
+
+### Tag
+A tag is used to label and mark a specific point/commit in the history. It is usually used to mark release points (eg. v1.0, etc.)
