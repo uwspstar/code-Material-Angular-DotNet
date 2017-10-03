@@ -3,10 +3,10 @@ Highly Recommend to Check out Details in
 [Git Beginner's Guide for Dummies](https://backlogtool.com/git-tutorial/en/contents/)
 
 
-[Quick start Example : Work in parallel](https://backlogtool.com/git-tutorial/en/stepup/stepup2_6.html)
+- [Quick start Example : Work in parallel](https://backlogtool.com/git-tutorial/en/stepup/stepup2_6.html)
 
 
-[Reference](https://backlogtool.com/git-tutorial/en/reference/)
+- [Reference](https://backlogtool.com/git-tutorial/en/reference/)
 ```javascript
 // Create a directory
 $ mkdir tutorial
