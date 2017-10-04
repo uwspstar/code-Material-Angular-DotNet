@@ -128,3 +128,24 @@ Install Microsoft.DotNet.Watcher.Tools as a DotNetCliToolReference to your proje
     <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
   </ItemGroup>
 ```
+
+```javascript
+
+$ dotnet restore
+
+// insted of using $ dotnet run, we will use $ dotnet watch run
+$ dotnet watch run
+
+```
+
+### SDLC Steps 
+
+- requirement
+- use cases
+- dependncy graph
+```
+3.filter vehicles --> 2. List vehicles --> 1. Create Vehices
+```
+```
+Create Vehicle --> Angular Form --> API --> Database --> Domain Model
+```

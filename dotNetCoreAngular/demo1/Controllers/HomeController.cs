@@ -11,6 +11,8 @@ namespace demo1.Controllers
     {
         public IActionResult Index()
         {
+            //throw new Exception();
+
             return View();
         }
 
