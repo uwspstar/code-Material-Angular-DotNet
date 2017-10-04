@@ -65,3 +65,10 @@ $ dotnet new angular
 $ npm install
 
 $ code .
+
+```
+
+- Kestrel vs WebListen
+
+`Kestrel` Cross-platform, lower security, good for internet
+`WebListen` Windows-only, IIS
