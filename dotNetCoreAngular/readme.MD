@@ -74,5 +74,43 @@ $ code .
 
 - `WebListen` Windows-only, IIS
 
-- ConfigureServices 
+### Startup
+- Startup.cs `ConfigureServices` 
 DI
+
+- Startup.cs `Configure` 
+
+Middleware : like a function, order is important
+
+```javascript
+loggerFactory. : log middlewares .
+
+app.UseWebpackDevMiddleware(...) : Webpack HotModuleReplacement auto refresh client side page without restart the project
+
+app.UseStaticFiles(): for using imgs
+
+app.UseMvc(...) : MVC middleware
+```
+
+### Environment
+
+```javascript
+Windows :
+
+Run > set ASPNETCORE_ENVIRONMENT="Development"
+
+Mac :
+
+$ export ASPNETCORE_ENVIRONMENT=Development
+
+`above only for this session`
+
+
+* setup machine level developement environment for mac
+
+//go to home
+$ cd
+$ code .bash_profile
+
+
+```
