@@ -105,12 +105,26 @@ $ export ASPNETCORE_ENVIRONMENT=Development
 
 `above only for this session`
 
+```
 
-* setup machine level developement environment for mac
+### Setup client side machine level developement environment for mac
 
+```javascript
 //go to home
 $ cd
 $ code .bash_profile
 
+`copy the following line inside the bash_profile` 
+export ASPNETCORE_ENVIRONMENT=Development
+```
 
+### Setup server side dotnet watch
+[Microsoft.DotNet.Watcher.Tools](https://github.com/aspnet/DotNetTools/tree/dev/src/Microsoft.DotNet.Watcher.Tools)
+
+Install Microsoft.DotNet.Watcher.Tools as a DotNetCliToolReference to your project, demo1.csproj file.
+
+```javascript
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
+  </ItemGroup>
 ```
