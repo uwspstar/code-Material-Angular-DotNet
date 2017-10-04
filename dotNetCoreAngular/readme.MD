@@ -45,13 +45,23 @@ $ docker ps -a
 // start docker container
 $ docker start 0bc6e87dc454
 // Stop docker container
-docker stop 0bc6e87dc454
+$ docker stop 0bc6e87dc454
 
-
-
+// Error log
+$ docker cp 0bc6e87dc454:/var/opt/mssql/log/errorlog .
 ```
 
 - Starting with SQL Server 2017 CTP 2.0, the SQL Server command-line tools are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
- 
-$ docker cp 0bc6e87dc454:/var/opt/mssql/log/errorlog .
+
+### Create new project
+
+```javascript
+$ mkdir demo1
+$ cd demo1
+
+$ dotnet new
+$ dotnet new angular
+$ npm install
+
+$ code .
