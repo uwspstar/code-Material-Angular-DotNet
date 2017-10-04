@@ -32,6 +32,7 @@ To use the MSSQL on Mac, easy way is to download Docker image
 - [install Docker](https://www.docker.com/docker-mac)
 after install docker, go to `preferences` -> `Advanced` -> change the memory to be 4G ( mssql need 4G memory to run)
 
+- [Docker for Mac](https://docs.docker.com/docker-for-mac/#general)
 - [Pull the SQL Server 2017 Linux container image from Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 
 ```javascript
@@ -143,6 +144,7 @@ $ dotnet watch run
 - requirement
 - use cases
 - dependncy graph
+
 ```
 3.filter vehicles --> 2. List vehicles --> 1. Create Vehices
 ```
