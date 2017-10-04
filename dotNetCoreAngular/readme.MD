@@ -1,0 +1,57 @@
+# .NET Core and Angular
+
+## Setup Dev Envorment On Mac
+
+### .NET Core
+[Install .NET Core SDK](https://www.microsoft.com/net/core#macos)
+
+- NOTE : [Create a Simple .NET Application on Mac](https://channel9.msdn.com/Blogs/dotnet/Create-NET-App-on-Mac?ocid=player)
+
+### VS Code
+[Downlaod VS Code](https://code.visualstudio.com/)
+
+### VS Code Extention
+
+- Angular v4 TypeScript Snippets 2.7.0
+- ASP.NET Helper 0.6.3
+- Auto Import 1.2.2
+- C# 1.12.1
+- C# Extensions for VSCode 1.3.0
+- Docker 0.018
+- mssql 1.2.0
+- REST Client 0.15.3
+
+### "Yeoman" OR "dotnet new ..."
+- yeoman
+$ npm install -g yo generator-aspnetcore-spa
+
+### Installing SQL Server on macOS / Linux
+
+To use the MSSQL on Mac, easy way is to download Docker image
+
+- [install Docker](https://www.docker.com/docker-mac)
+after install docker, go to `preferences` -> `Advanced` -> change the memory to be 4G ( mssql need 4G memory to run)
+
+- [Pull the SQL Server 2017 Linux container image from Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+
+```javascript
+$ docker pull microsoft/mssql-server-linux:2017-latest
+```
+```javascript
+$ docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=MyComplexPassw0rd!234' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
+
+// List active container
+$ docker ps -a
+// start docker container
+$ docker start 0bc6e87dc454
+// Stop docker container
+docker stop 0bc6e87dc454
+
+
+
+```
+
+- Starting with SQL Server 2017 CTP 2.0, the SQL Server command-line tools are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
+
+ 
+$ docker cp 0bc6e87dc454:/var/opt/mssql/log/errorlog .
