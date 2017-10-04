@@ -85,7 +85,7 @@ Middleware : like a function, order is important
 ```javascript
 loggerFactory. : log middlewares .
 
-app.UseWebpackDevMiddleware(...) : Webpack HotModuleReplacement auto refresh client side page without restart the project
+app.UseWebpackDevMiddleware(...) : Webpack HotModuleReplacement auto refresh client side (Not Server side ) page without restart the project
 
 app.UseStaticFiles(): for using imgs
 
