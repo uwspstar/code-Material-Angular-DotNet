@@ -151,3 +151,20 @@ $ dotnet watch run
 ```
 Create Vehicle --> Angular Form --> API --> Database --> Domain Model
 ```
+
+
+## Build Domain Modles
+
+`
+the templet has the Controllers & Views, but not Models, we need to create it
+`
+```javascript
+$ mkdir Models
+```
+
+#### ICollection vs IList
+
+```javascript
+There are similar, but IColletion does not have Index. IList have Index
+
+```
