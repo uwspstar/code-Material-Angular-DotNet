@@ -58,4 +58,15 @@ http.get<MyType>(path)
 ```javascript
 md -> mat
 ```
+
+### C# 7
+
+- Out Variables
+- Local Functions
+- Tuples and Deconstruction
+- Pattern Matching
+- Returning by Reference
+- Throwing Expressions
+- Improvements to Literals
+
 # Projects list
