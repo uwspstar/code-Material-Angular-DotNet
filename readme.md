@@ -15,17 +15,17 @@
 ```
 
 - HttpClient
-
+```javascript
 Instead of
-```javascript
+
 http.get(path).map(res=>res.json());
-```
+ 
 Use
-```javascript
+ 
 http.get(paht)
-```
+ 
 or
-```javascript
+ 
 http.get<MyType>(path)
 ```
 
