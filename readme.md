@@ -41,7 +41,7 @@ http.get<MyType>(path)
 
 - Faster
 ```javascript
-1. NGC as TypeScript Transform (build time)
+1. NGC as TypeScript Transform (build time) . the end result is usually 40% faster AOT builds
 2. Bundle Size Improvements
 ```
 
@@ -54,5 +54,11 @@ http.get<MyType>(path)
 2. Additional DOM Support for Universal
 3. NgUpgradeLite
 4. Newi18n pipes
+```
+
+- Angular Material Rename
+
+```javascript
+md -> mat
 ```
 # Projects list
