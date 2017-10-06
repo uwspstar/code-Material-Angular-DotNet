@@ -28,10 +28,7 @@ or
  
 http.get<MyType>(path)
 ```
-
-- Schematics
-
-- v5
+- Angular 5
 ```javascript
 1. Whitespace Removal
 2. Build Optimizer
