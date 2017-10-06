@@ -153,7 +153,7 @@ Create Vehicle --> Angular Form --> API --> Database --> Domain Model
 ```
 
 
-## Build Domain Modles
+### Build Domain Modles
 
 `
 the templet has the Controllers & Views, but not Models, we need to create it
@@ -166,5 +166,44 @@ $ mkdir Models
 
 ```javascript
 There are similar, but IColletion does not have Index. IList have Index
+
+```
+### add dotnet package
+
+```javascript
+// add package
+$ dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+// in the demo1.csproj has the entity package
+ ...
+
+  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
+
+...
+
+// restore
+$ dotnet restore
+
+
+// add migration tool in demo1.csproj file
+
+...
+<ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
+
+...
+
+// dotnet migrations --help
+$ dotnet ef migrations --help
+
+// add commad
+$ dotnet ef migrations add --help
+```
+
+#### Persistence
+
+```javascript
+$ mkdir Persistence
 
 ```
