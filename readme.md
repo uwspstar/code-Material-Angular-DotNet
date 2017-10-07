@@ -23,6 +23,28 @@
     }
 }
 ```
+## my vscode Extensions
+
+```javascript
+- Angular Material 2, Flex layout 1
+- Angular v4 TypeScript Snippets
+- ASP.NET Helper
+- Auto Import
+- Bracket Pair Colorizer
+- C#
+- C# Extensions
+- Docker
+- JS-CSS-HTML Formatter
+- Move TS
+- mssql
+- Path Intellisense
+- REST Cliet
+- TSLint
+- TypeScript Hero
+- vscode-icons
+
+
+```
 
 ### Angular
 
