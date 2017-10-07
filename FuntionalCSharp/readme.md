@@ -8,6 +8,21 @@
 
 - FP makes code understandable by minimizing moving parts.
 
+
+`Functional programming is programming with mathematical functions`
+
+`Mathematical function NOT as same as Class method`
+
+```
+- same input - same result
+- information about possible input and outcomes
+```
+
+`Mathematical Function` 
+- Honest : Has precisely defined input and output. 
+- Referentially transparent : Doesn't affect or refer to the global state
+
+
 ### C#
 - C# 3.0 LiNQ, extension methods
 - C# 6.0 Read-only properties
