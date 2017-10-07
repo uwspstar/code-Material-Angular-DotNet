@@ -22,6 +22,11 @@
 - Honest : Has precisely defined input and output. 
 - Referentially transparent : Doesn't affect or refer to the global state
 
+### Vocabulary
+
+- `Immutability` Inablility to change data
+- `State` Data that changes over time. Only mutable class do.
+- `Side effect` A change that is made to some state
 
 ### C#
 - C# 3.0 LiNQ, extension methods
