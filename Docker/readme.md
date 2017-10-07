@@ -7,8 +7,6 @@ Development --> Staging --> Production
 - Provides image and container tools
 - Virtual Machine (for Windows /Mac)
 
-- Tools 
-
 ```javascript
 - Docker Client
 - Docker Machine
@@ -21,3 +19,7 @@ Development --> Staging --> Production
 
 - Installing Docker on Mac
 [Community Edition (CE)](https://store.docker.com/editions/community/docker-ce-desktop-mac)
+
+- Docker kitematic Overview (GUI)
+
+

@@ -1,5 +1,29 @@
 # All about Web Development
 
+## my vscode settings.json
+
+```javascript
+{
+    "workbench.sideBar.location": "right",
+    "window.zoomLevel": 2,
+    "vsicons.projectDetection.autoReload": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "node_modules": true
+    },
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#00FD61",
+        "terminal.background": "#383737"
+    }
+}
+```
+
 ### Angular
 
 - Angular 5 is coming, What's new [see here](https://www.youtube.com/watch?v=T83qYxlVOBw&feature=youtu.be&t=2411)
