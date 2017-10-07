@@ -16,3 +16,8 @@ Development --> Staging --> Production
 - Docker Kitematic
 - VirtualBox
 ```
+
+## Setting up Your Docker Environment
+
+- Installing Docker on Mac
+[Community Edition (CE)](https://store.docker.com/editions/community/docker-ce-desktop-mac)
