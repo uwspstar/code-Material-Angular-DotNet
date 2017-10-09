@@ -61,6 +61,15 @@ $ git rebase master
 $ git add myfile.txt
 $ git rebase --continue
 
+
+// stash
+$ git pull
+ ...
+// file foobar not up to date, cannot merge.
+$ git stash
+$ git pull
+$ git stash pop
+
 ```
 
 ## Installing Git
