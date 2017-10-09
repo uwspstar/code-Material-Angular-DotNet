@@ -48,7 +48,7 @@ $ git checkout master
 $ git merge issue1
 
 // Merge "issue3" into "master"
-$git merge issue3
+$ git merge issue3
 
 // Delete branch
 $ git branch -d issue1
