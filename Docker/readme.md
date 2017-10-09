@@ -22,4 +22,21 @@ Development --> Staging --> Production
 
 - Docker kitematic Overview (GUI)
 
+```javascript
+$ docker-machine ls [machine name]
+$ docker-machine start [machine name]
+$ docker-machine stop [machine name]
+$ docker-machine env [machine name]
+$ docker-machine ip [machine name]
+$ docker-machine status [machine name]
+
+
+$ docker pull [image name]
+$ docker images
+$ docker rmi [image id]
+$ docker run [image name]
+$ docker ps -a
+$ coker rm [container Id]
+```
+
 
