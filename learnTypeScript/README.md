@@ -93,3 +93,7 @@ interface Course {
 
 - So as we can see at this point, although the Typescript Type System looks very familiar to developers coming from other languages at first, its actually designed in a fundamentally different way.
 
+
+### Recommended Reading
+- [Learn Typescript in 5 minutes](https://learnxinyminutes.com/docs/typescript/)
+
