@@ -71,7 +71,7 @@ $ git pull
 $ git stash pop
 
 ```
-##Update Current Branch and Merge to default
+## Update Current Branch and Merge to default
 
 - STEP 1:  F6 rebuild whole solution 
 // to get the latest remote
