@@ -73,16 +73,18 @@ $ git stash pop
 ```
 ## Update Current Branch and Merge to default
 
-- STEP 1:  F6 rebuild whole solution 
-- STEP 2:  $ Fetch  
+- STEP 1:  `$ F6` 
+// rebuild whole solution on your local working branch
+- STEP 2:  `$ Fetch`  
 // to get the latest remote
-- STEP 3:  $ git rebase origin/default
+- STEP 3:  `$ git rebase origin/default`
 // rebase the default, may need to solve the conflicts, 
-- STEP 4:  $ git checkout default
-- STEP 5: $ merge <YourLocalBranch>
-- STEP 6: $ git pull –-rebase
-- STEP 7: $ F6 Build on Default after merge
-- STEP 8: $ git push origin HEAD
+- STEP 4:  `$ git checkout default`
+- STEP 5: `$ merge <YourLocalBranch>`
+- STEP 6: `$ git pull –-rebase`
+- STEP 7: `$ F6` 
+// Build on Default after merge
+- STEP 8: `$ git push origin HEAD`
 // HEAD means Current branch
 
 ## Installing Git
