@@ -2,6 +2,7 @@
 Highly Recommend to Check out Details in 
 [Git Beginner's Guide for Dummies](https://backlogtool.com/git-tutorial/en/contents/)
 
+- [GIT CHEAT SHEET](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 
 - [Quick start Example : Work in parallel](https://backlogtool.com/git-tutorial/en/stepup/stepup2_6.html)
 
