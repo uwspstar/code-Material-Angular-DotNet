@@ -71,6 +71,22 @@ $ git pull
 $ git stash pop
 
 ```
+##Update Current Branch and Merge to default
+
+- STEP 1:  F6 rebuild whole solution 
+// to get the latest remote
+- STEP 2:  $ Fetch  
+// rebase the default, may need to solve the conflicts,   
+- STEP 3:  $ git rebase origin/default
+STEP 4:  $ git checkout default
+//merge
+- STEP 5: $ merge <YourLocalBranch>
+//pull rebase
+- STEP 6: $ git pull –-rebase
+// HEAD means Current branch
+- STEP 7: $ F6 Build on Default after merge
+- STEP 8: $ git push origin HEAD
+
 
 ## Installing Git
 - [Source Tree](http://www.sourcetreeapp.com/)
