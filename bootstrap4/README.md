@@ -1,3 +1,10 @@
+## Firebase deployment Simple steps 
+```javascript
+- $ ng build --prod
+- $ firebase init
+- $ firebase deploy
+```
+
 ## Install bootstrap4 
 
 - install bootstrap4 
