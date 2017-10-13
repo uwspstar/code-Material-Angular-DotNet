@@ -130,7 +130,7 @@ em: Good for accessibility, just okay for maintainability / consistency
 rem: Good for accessibility, really good for maintainability / consistency
 
 ```
-- [Simple Explanation Of rem & em CSS Units](https://www.youtube.com/watch?v=H4UtKu11yXg&list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU&index=26)
+- [Simple Explanation Of rem & em CSS Units](https://www.youtube.com/watch?v=H4UtKu11yXg&list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU&index=26) By Traversy Media
 
 
 # Projects list
