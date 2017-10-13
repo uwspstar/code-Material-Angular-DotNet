@@ -1,4 +1,6 @@
 
+## Install Ionic and Firebase
+
 ```javascript
 $ npm install -g ionic@latest
 
