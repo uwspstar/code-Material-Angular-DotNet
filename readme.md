@@ -123,7 +123,7 @@ md -> mat
 
 ### CSS
 - Recommend to read 
-By Nicholas Cerminara [Bootstrap 4 ...](https://scotch.io/tutorials/a-look-at-bootstrap-4s-new-reset-rebootcss?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning)
+[Bootstrap 4 ...](https://scotch.io/tutorials/a-look-at-bootstrap-4s-new-reset-rebootcss?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning) By Nicholas Cerminara 
 ```
 px: Good for consistency, bad for accessibility
 em: Good for accessibility, just okay for maintainability / consistency
