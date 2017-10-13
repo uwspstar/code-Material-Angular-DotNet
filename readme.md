@@ -22,6 +22,8 @@
         "terminal.background": "#383737"
     }
 }
+
+
 ```
 ## my vscode Extensions
 
@@ -45,6 +47,10 @@
 
 
 ```
+
+### TypeScript
+[TypeScript in 5 minutes](https://learnxinyminutes.com/docs/typescript/)
+[TypeScript in 30 minutes](https://tutorialzine.com/2016/07/learn-typescript-in-30-minutes)
 
 ### Angular
 
