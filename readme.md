@@ -121,4 +121,13 @@ md -> mat
 - Throwing Expressions
 - Improvements to Literals
 
+### CSS
+- Recommend to read 
+[How REMs Work](https://scotch.io/tutorials/a-look-at-bootstrap-4s-new-reset-rebootcss?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning)
+```
+px: Good for consistency, bad for accessibility
+em: Good for accessibility, just okay for maintainability / consistency
+rem: Good for accessibility, really good for maintainability / consistency
+
+```
 # Projects list
