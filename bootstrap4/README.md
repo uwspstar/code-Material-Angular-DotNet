@@ -12,7 +12,7 @@
 ```
 Run > npm i --save bootstrap 
 ```
-`NOTE : in my case, the @3.3.7 install, so I need to Run`
+`NOTE : in my case, the @3.3.7 install, so I need to Run` 
 
 ```
 Run > npm i --save bootstrap@next to get @4.0.0-beta
