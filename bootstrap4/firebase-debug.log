@@ -1,32 +1,32 @@
-[debug] [2017-10-12T11:15:42.668Z] ----------------------------------------------------------------------
-[debug] [2017-10-12T11:15:42.671Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
-[debug] [2017-10-12T11:15:42.671Z] CLI Version:   3.13.1
-[debug] [2017-10-12T11:15:42.671Z] Platform:      darwin
-[debug] [2017-10-12T11:15:42.671Z] Node Version:  v8.6.0
-[debug] [2017-10-12T11:15:42.672Z] Time:          Thu Oct 12 2017 06:15:42 GMT-0500 (CDT)
-[debug] [2017-10-12T11:15:42.672Z] ----------------------------------------------------------------------
+[debug] [2017-10-12T11:21:18.412Z] ----------------------------------------------------------------------
+[debug] [2017-10-12T11:21:18.414Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2017-10-12T11:21:18.415Z] CLI Version:   3.13.1
+[debug] [2017-10-12T11:21:18.415Z] Platform:      darwin
+[debug] [2017-10-12T11:21:18.415Z] Node Version:  v8.6.0
+[debug] [2017-10-12T11:21:18.416Z] Time:          Thu Oct 12 2017 06:21:18 GMT-0500 (CDT)
+[debug] [2017-10-12T11:21:18.416Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2017-10-12T11:15:42.681Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2017-10-12T11:15:42.681Z] > authorizing via signed-in user
-[debug] [2017-10-12T11:15:42.682Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2017-10-12T11:15:42.683Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/V27LQ2zND6BqTEBCkNrjPM_ZpXGKxqAAP2Yt-m3gkKTr_dasfvzCGsf3QHfqbuAV',
+[debug] [2017-10-12T11:21:18.425Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-12T11:21:18.425Z] > authorizing via signed-in user
+[debug] [2017-10-12T11:21:18.426Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-10-12T11:21:18.426Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/V27LQ2zND6BqTEBCkNrjPM_ZpXGKxqAAP2Yt-m3gkKTr_dasfvzCGsf3QHfqbuAV',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Thu Oct 12 2017 06:15:42 GMT-0500 (CDT)
-[debug] [2017-10-12T11:15:42.925Z] <<< HTTP RESPONSE 200
-[debug] [2017-10-12T11:15:42.943Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/jaxbot-3ca0f  
- Thu Oct 12 2017 06:15:42 GMT-0500 (CDT)
-[debug] [2017-10-12T11:15:43.300Z] <<< HTTP RESPONSE 200
-[debug] [2017-10-12T11:15:43.301Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/jaxbot-3ca0f/tokens  
- Thu Oct 12 2017 06:15:43 GMT-0500 (CDT)
-[debug] [2017-10-12T11:15:43.970Z] <<< HTTP RESPONSE 200
+ Thu Oct 12 2017 06:21:18 GMT-0500 (CDT)
+[debug] [2017-10-12T11:21:18.638Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-12T11:21:18.656Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/jaxbot-3ca0f  
+ Thu Oct 12 2017 06:21:18 GMT-0500 (CDT)
+[debug] [2017-10-12T11:21:19.004Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-12T11:21:19.005Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/jaxbot-3ca0f/tokens  
+ Thu Oct 12 2017 06:21:19 GMT-0500 (CDT)
+[debug] [2017-10-12T11:21:19.518Z] <<< HTTP RESPONSE 200
 [info] 1
 [info] 
 [info] === Deploying to 'jaxbot-3ca0f'...
 [info] 
 [info] i  deploying hosting
 [info] i  hosting: preparing dist directory for upload...
-[debug] [2017-10-12T11:15:47.064Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/jaxbot-3ca0f/uploads/-KwFI1Qb-9HWdMvOfyG5?fileCount=9&message=  
- Thu Oct 12 2017 06:15:47 GMT-0500 (CDT)
+[debug] [2017-10-12T11:21:22.389Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/jaxbot-3ca0f/uploads/-KwFJJIKvelnnw21fR7Y?fileCount=9&message=  
+ Thu Oct 12 2017 06:21:22 GMT-0500 (CDT)
