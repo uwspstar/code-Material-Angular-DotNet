@@ -14,7 +14,29 @@ $ npm install firebase angularfire2
 
 ```
 
-
+- create firebase.credential.ts
+```javascript
+export const FIREBASE_CREDENTIALS ={
+    apiKey: "yourkey",
+    authDomain: "ionic3firebasecrud-7de86.firebaseapp.com",
+    databaseURL: "https://ionic3firebasecrud-7de86.firebaseio.com",
+    projectId: "yourprojctid",
+    storageBucket: "",
+    messagingSenderId: "yourid"
+}
+```
+- update the app.module.ts
+```javascript
+import { AngularFireModule} from 'angularfire2'
+import { FIREBASE_CREDENTIALS } from './firebase.credentials'
+...
+imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CREDENTIALS)
+  ],
+...
+```
 
 
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
