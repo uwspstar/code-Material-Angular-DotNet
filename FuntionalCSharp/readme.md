@@ -1,5 +1,9 @@
 # Functional C#
 
+### Recommand to read
+- [Lambda Calculus - Computerphile](https://www.youtube.com/watch?v=eis11j_iGMs&t=633s)
+- [Functional Programming's Y Combinator - Computerphile](https://www.youtube.com/watch?v=9T8A89jgeTI)
+
 1. Tamed side Effects 
 2. Expression -Based
 3. Treat Functions as Data
