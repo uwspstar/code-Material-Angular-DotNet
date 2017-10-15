@@ -3,6 +3,7 @@
 ### Recommand to read
 - [Lambda Calculus - Computerphile](https://www.youtube.com/watch?v=eis11j_iGMs&t=633s)
 - [Functional Programming's Y Combinator - Computerphile](https://www.youtube.com/watch?v=9T8A89jgeTI)
+- [Haskell Fundamentals](https://app.pluralsight.com/player?course=haskell-fundamentals-part1&author=benson-joeris&name=haskell-fundamentals-part1-m1&clip=0&mode=live)
 
 1. Tamed side Effects 
 2. Expression -Based
