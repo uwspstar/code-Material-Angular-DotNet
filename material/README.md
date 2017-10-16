@@ -31,7 +31,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   ...
   imports: [
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule //If you don't want to add another dependency to your project, you can use the NoopAnimationsModule
 ],
   ...
 })
