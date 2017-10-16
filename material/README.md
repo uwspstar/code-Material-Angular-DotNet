@@ -46,7 +46,7 @@ import {MatRadioModule, MatCheckboxModule} from '@angular/material';
   imports: [MatRadioModule, MatCheckboxModule],
   exports: [MatRadioModule, MatCheckboxModule],
 })
-export class MyOwnModule { }
+export class MyModule { }
 ```
 - [Checkbox](https://material.angular.io/components/checkbox/api)
 `MatCheckbox : old version use md-checkbox, the new version use mat-checkbox`
