@@ -1,3 +1,5 @@
+<h1>CheckBox</h1>
+<hr>
 <mat-checkbox>Checkbox label</mat-checkbox>
 <hr>
 <mat-checkbox value="" color="primary" [checked]='true'>Checkbox : primary
@@ -13,6 +15,8 @@
 </mat-checkbox>
 <div *ngIf="showDetails.checked">Some Details</div>
 <hr>
+<h1>Radio</h1>
+<hr>
 <mat-radio-group>
     <mat-radio-button value="1">Option 1</mat-radio-button>
     <mat-radio-button value="2" [checked]="isChecked">Option isChecked</mat-radio-button>
@@ -22,6 +26,8 @@
     <mat-radio-button value="0">Option 1</mat-radio-button>
     <mat-radio-button value="1">Option set value checked in radio-group</mat-radio-button>
 </mat-radio-group>
+<hr>
+<h1>Select</h1>
 <hr>
 <h4>native h5 dropdown</h4>
 <select>
@@ -45,4 +51,25 @@
         </mat-option>
     </mat-select>
 </mat-form-field>
+<hr>
+<h1>Input</h1>
+<hr>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite food" value="Sushi">
+    </mat-form-field>
+</form>
+<hr>
+<a href="https://material.angular.io/components/input/overview#custom-error-matcher">Custom Error Matcher</a>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input matInput require ngModel #username="ngModel" name="username" placeholder="Username">
+        <mat-hint>Type a username.</mat-hint>
+        <span matSuffix>@domain.com</span>
+        <span matPrefix>admin.</span>
+        <mat-error *ngIf="username.invalid && usernam.errors.required">
+            The username is required
+        </mat-error>
+    </mat-form-field>
+</form>
 <hr>

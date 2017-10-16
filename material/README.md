@@ -46,3 +46,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 - [Select](https://material.angular.io/components/select/api)
 
 `ngModule is from FormsModule`
+
+- [Input](https://material.angular.io/components/input/api)
+- [Input Custom Error Matcher](https://material.angular.io/components/input/overview#custom-error-matcher)
