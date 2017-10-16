@@ -38,6 +38,16 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 ```
 
+- Separate NgModule that imports all of the Angular Material components
+```html
+import {MatRadioModule, MatCheckboxModule} from '@angular/material'; 
+
+@NgModule({
+  imports: [MatRadioModule, MatCheckboxModule],
+  exports: [MatRadioModule, MatCheckboxModule],
+})
+export class MyOwnModule { }
+```
 - [Checkbox](https://material.angular.io/components/checkbox/api)
 `MatCheckbox : old version use md-checkbox, the new version use mat-checkbox`
 
