@@ -1,6 +1,18 @@
+<input type="text" [(ngModel)]="title" name="title" placeholder="Title..">
+<textarea [(ngModel)]="content" name="content" id="content" cols="30" rows="10" placeholder="Content.."></textarea>
+<input type="submit" value="Add a post" (click)="addPost()">
+
+
 <ul *ngFor="let post of posts | async">
-    <li>
-        <strong>{{post.title}}</strong>
-        <br> {{post.content}}
+    <li (click)="getPost(post.id)" style="border:1px solid #e00;padding:.6rem;">
+
+        <strong>{{post.data.title}} (<a href="#" (click)="deletePost(post.id)">Delete</a>)</strong>
+        <br> {{post.data.content}}
     </li>
 </ul>
+
+<h1>A Post Detail</h1>
+<div style="background: skyblue; padding:1rem">
+    <h3>{{(post | async)?.title}}</h3>
+    <p>{{(post | async)?.content}}</p>
+</div>
