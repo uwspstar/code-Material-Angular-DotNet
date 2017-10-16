@@ -55,3 +55,32 @@
 @media (min-width: 1200px) { ... }
 ```
 - Container
+
+```html
+<div class="container" style="background:skyblue">
+    <h1>Fixed Container</h1>
+</div>
+
+<div class="container-fluid" style="background:yellow">
+    <h1>Fluid Container</h1>
+</div>
+```
+- XXXXXX
+```html
+
+```
+
+- XXXXXX
+```html
+
+```
+
+- XXXXXX
+```html
+
+```
+
+- XXXXXX
+```html
+
+```
