@@ -1,6 +1,7 @@
 # Cloudfirestore
 
-Recommand to watch [Cloud Firestore Tutorial using Angular (AngularFire5](https://www.youtube.com/watch?v=0Nah3foeyCM) by DesignCourse
+Recommand to watch [Cloud Firestore Tutorial using Angular (AngularFire5)](https://www.youtube.com/watch?v=0Nah3foeyCM) by DesignCourse
+
 - Setup
 ```javascript
 // create cloudfirestore project
