@@ -1,0 +1,48 @@
+<mat-checkbox>Checkbox label</mat-checkbox>
+<hr>
+<mat-checkbox value="" color="primary" [checked]='true'>Checkbox : primary
+</mat-checkbox>
+<hr>
+<mat-checkbox value="my warn checkbox" color="warn" [checked]="isChecked">Checkbox : isChecked
+</mat-checkbox>
+<hr>
+<mat-checkbox color="warn" [checked]="isChecked" (change)="onChange($event)">Checkbox : onChange($event)
+</mat-checkbox>
+<hr>
+<mat-checkbox #showDetails color="warn" [checked]="isChecked" (change)="onChange($event)">Checkbox : showDetails when Checked = true
+</mat-checkbox>
+<div *ngIf="showDetails.checked">Some Details</div>
+<hr>
+<mat-radio-group>
+    <mat-radio-button value="1">Option 1</mat-radio-button>
+    <mat-radio-button value="2" [checked]="isChecked">Option isChecked</mat-radio-button>
+</mat-radio-group>
+<hr>
+<mat-radio-group value="0">
+    <mat-radio-button value="0">Option 1</mat-radio-button>
+    <mat-radio-button value="1">Option set value checked in radio-group</mat-radio-button>
+</mat-radio-group>
+<hr>
+<h4>native h5 dropdown</h4>
+<select>
+  <option *ngFor="let color of colors" [value]="color.id">{{color.name}}</option>
+</select>
+<hr>
+<h4>select color without default</h4>
+<mat-select>
+    <mat-option *ngFor="let color of colors" [value]="color.id">{{color.name}}</mat-option>
+</mat-select>
+<hr>
+<h4>bind color = 2</h4>
+<mat-select [(ngModel)]="color">
+    <mat-option *ngFor="let color of colors" [value]="color.id">{{color.name}}</mat-option>
+</mat-select>
+<hr>
+<mat-form-field>
+    <mat-select placeholder="Favorite food">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<hr>

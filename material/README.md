@@ -1,0 +1,48 @@
+# Material
+
+- [Angular material 2 Getting Started](https://github.com/angular/material2/blob/master/guides/getting-started.md)
+
+- Recommad to watch [Angular Material ](https://www.youtube.com/watch?v=wPT3K3w6JtU) by Mosh
+
+```javascript
+$ npm install --save @angular/material @angular/cdk
+
+// animations
+$ npm install --save @angular/animations
+
+// hammerjs (mat-slide-toggle, mat-slider, matTooltip) rely on HammerJS
+$ npm install --save hammerjs
+```
+- update styles.css:
+```html
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"
+```
+
+- Material Design Icons, load the icon font in your index.html.
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+```
+- update app.module.ts
+```javascript
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+@NgModule({
+  ...
+  imports: [
+    BrowserAnimationsModule,
+    NoopAnimationsModule
+],
+  ...
+})
+
+```
+
+- [Checkbox](https://material.angular.io/components/checkbox/api)
+`MatCheckbox : old version use md-checkbox, the new version use mat-checkbox`
+
+- [Radio button](https://material.angular.io/components/radio/api)
+
+- [Select](https://material.angular.io/components/select/api)
+
+`ngModule is from FormsModule`
