@@ -29,17 +29,17 @@
 <hr>
 <h1>Select</h1>
 <hr>
-<h4>native h5 dropdown</h4>
+<h3>native h5 dropdown</h3>
 <select>
   <option *ngFor="let color of colors" [value]="color.id">{{color.name}}</option>
 </select>
 <hr>
-<h4>select color without default</h4>
+<h3>select color without default</h3>
 <mat-select>
     <mat-option *ngFor="let color of colors" [value]="color.id">{{color.name}}</mat-option>
 </mat-select>
 <hr>
-<h4>bind color = 2</h4>
+<h3>bind color = 2</h3>
 <mat-select [(ngModel)]="color">
     <mat-option *ngFor="let color of colors" [value]="color.id">{{color.name}}</mat-option>
 </mat-select>
@@ -60,7 +60,7 @@
     </mat-form-field>
 </form>
 <hr>
-<a href="https://material.angular.io/components/input/overview#custom-error-matcher">Custom Error Matcher</a>
+<h3>Custom Error Matcher</h3>
 <form class="example-form">
     <mat-form-field class="example-full-width">
         <input matInput require ngModel #username="ngModel" name="username" placeholder="Username">
@@ -75,10 +75,26 @@
 <hr>
 <h1>Textarea</h1>
 <hr>
-<h3>autosize</h3>
+<h3>Textarea Autosize</h3>
 <form class="example-form">
     <mat-form-field class="example-full-width">
         <textarea matInput matTextareaAutosize placeholder="description ..." rows="2"></textarea>
     </mat-form-field>
 </form>
+<hr>
+<h1>Date Picker</h1>
+<hr>
+<h3>touchUi="true"</h3>
+<mat-form-field>
+    <input [min]="minDate" matInput [matDatepicker]="birthdate" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
+    <mat-datepicker #birthdate touchUi="true"></mat-datepicker>
+</mat-form-field>
+<hr>
+<h3>(focus)="birthdate2.open"</h3>
+<mat-form-field>
+    <input (focus)="birthdate2.open()" matInput [matDatepicker]="birthdate2" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="birthdate2"></mat-datepicker-toggle>
+    <mat-datepicker #birthdate2 touchUi="true"></mat-datepicker>
+</mat-form-field>
 <hr>

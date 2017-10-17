@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 h1 {
     color: skyblue;
-    font-size: 6rem;
+    font-size: 7rem;
 }
 
 h3 {
     color: green;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }

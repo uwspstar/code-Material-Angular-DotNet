@@ -23,6 +23,8 @@ export class AppComponent {
     { value: 'tacos-2', viewValue: 'Tacos' }
   ];
 
+  minDate = new Date(2017, 10, 17);
+
   onChange($event) {
     console.log($event);
   }
