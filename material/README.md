@@ -59,3 +59,5 @@ export class MyModule { }
 
 - [Input](https://material.angular.io/components/input/api)
 - [Input Custom Error Matcher](https://material.angular.io/components/input/overview#custom-error-matcher)
+
+- [Textarea](https://material.angular.io/components/input/api)
