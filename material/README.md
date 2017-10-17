@@ -70,4 +70,11 @@ export class MyModule { }
 - [Date Picker](https://material.angular.io/components/datepicker/api)
 ` need to import 'MatNativeDateModule'`
 
-- [icons](https://material.angular.io/guides)
+- [Icons](https://material.angular.io/guides)
+- [Buttons](https://material.angular.io/components/button/overview)
+- [Chips](https://material.angular.io/components/chips/overview)
+- [Progress spinner](https://material.angular.io/components/progress-spinner/overview)
+
+## Examples 
+```html
+```

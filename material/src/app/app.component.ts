@@ -23,9 +23,30 @@ export class AppComponent {
     { value: 'tacos-2', viewValue: 'Tacos' }
   ];
 
+  fruits = [
+    { name: 'Lemon' },
+    { name: 'Lime' },
+    { name: 'Apple' },
+  ];
+
+  categories = [
+    { name: 'Beginner' },
+    { name: 'Intermediate' },
+    { name: 'Advanced' },
+  ];
+
   minDate = new Date(2017, 10, 17);
 
   onChange($event) {
     console.log($event);
   }
+
+  selectCategory(category) {
+    this.categories
+      .filter(c => c !== category)
+      .forEach(c => c['selected'] = false);
+
+    category.selected = !category.selected;
+  }
+
 }
