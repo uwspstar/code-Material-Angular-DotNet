@@ -21,6 +21,11 @@ $ npm install --save hammerjs
 - Material Design Icons, load the icon font in your index.html.
 ```html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ or, put it inside the style.css
+
+@import "https://fonts.googleapis.com/icon?family=Material+Icons" 
+
 ```
 - update app.module.ts
 ```javascript

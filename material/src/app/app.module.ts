@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
+    MatButtonModule,
     MatCheckboxModule,
     MatDatepickerModule,
+    MatIconModule,
     MatInputModule,
     MatNativeDateModule,
     MatRadioModule,
@@ -29,6 +31,8 @@ import { AppComponent } from './app.component';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatIconModule,
+    MatButtonModule,
     NoopAnimationsModule
   ],
   providers: [],
