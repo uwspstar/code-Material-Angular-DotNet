@@ -14,6 +14,7 @@ import { AuthService } from './services/auth.service';
 import { NotFoundComponent } from './auth/not-found/not-found.component';
 import { fakeBackendProvider } from './help/fake-backend';
 import { MockBackend } from '@angular/http/testing';
+import { AuthGuard } from './services/authGuard.service';
 
 @NgModule({
   declarations: [
@@ -31,13 +32,14 @@ import { MockBackend } from '@angular/http/testing';
     HttpModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'admin', component: AdminComponent },
+      { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
       { path: 'login', component: LoginComponent },
       { path: 'no-access', component: NoAccessComponent }
     ]),
   ],
   providers: [
     AuthService,
+    AuthGuard,
     UserService,
     fakeBackendProvider,
     MockBackend,

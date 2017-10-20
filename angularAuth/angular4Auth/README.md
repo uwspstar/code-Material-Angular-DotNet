@@ -1,5 +1,9 @@
 # Angular4Auth
 
+- Recommand to read [Angular 2/4 User Registration and Login Example & Tutorial](http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial) by Jason Watmore
+
+- Recommand to follow the Mosh Hamedani udemy course "The Complete Angular Course"
+
 ```
 // install bootstrap
 $ npm install --save bootstrap

@@ -29,4 +29,13 @@ export class AuthService {
 
         return tokenNotExpired();
     }
+
+    get currentUser() {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            return false;
+        }
+
+        return new JwtHelper().decodeToken(token);
+    }
 }

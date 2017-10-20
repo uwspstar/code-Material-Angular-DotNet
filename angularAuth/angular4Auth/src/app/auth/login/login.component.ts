@@ -30,11 +30,11 @@ export class LoginComponent implements OnInit {
     this.authService.login(credentials)
       .subscribe(result => {
         if (result) {
-          this.router.navigate(['/']);
+          this.router.navigate([this.returnUrl]);
         } else {
           this.invalidLogin = true;
         }
-
       });
   }
+
 }
