@@ -1,28 +1,58 @@
 # Angular4Auth
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+```
+// install bootstrap
+$ npm install --save bootstrap
 
-## Development server
+// modify .angular-cli.json
+"styles": [
+    "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "styles.css"
+],
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+// install font anwsome Packages 
+$ npm install --save font-awesome angular-font-awesome
 
-## Code scaffolding
+// import AngularFontAwesomeModule 
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+@NgModule({
+  //...
+  imports: [
+    //...
+    AngularFontAwesomeModule
+  ],
+  //...
+})
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+// modify .angular-cli.json
+"styles": [
+    //...
+    "../node_modules/font-awesome/css/font-awesome.css",
+    "styles.css"
+],
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+// jwt
+$ npm install angular2-jwt
 
-## Running unit tests
+// use tokenNotExpired();
+isLoggedIn() {
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+        return tokenNotExpired();
+        /*
+        const jwtHelper = new JwtHelper();
+        const token = localStorage.getItem('token');
+        if (!token) {
+            return false;
+        }
 
-## Running end-to-end tests
+        const expirationDate = jwtHelper.getTokenExpirationDate(token);
+        const isExpired = jwtHelper.isTokenExpired(token);
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+        console.log('token = ' + token);
+        console.log('expirationDate = ' + token);
+        console.log('isExpired = ' + token);
+        return !isExpired;
+        */
+    }
+```
