@@ -28,20 +28,5 @@ export class AuthService {
     isLoggedIn() {
 
         return tokenNotExpired();
-        /*
-        const jwtHelper = new JwtHelper();
-        const token = localStorage.getItem('token');
-        if (!token) {
-            return false;
-        }
-
-        const expirationDate = jwtHelper.getTokenExpirationDate(token);
-        const isExpired = jwtHelper.isTokenExpired(token);
-
-        console.log('token = ' + token);
-        console.log('expirationDate = ' + token);
-        console.log('isExpired = ' + token);
-        return !isExpired;
-        */
     }
 }
