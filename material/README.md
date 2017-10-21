@@ -55,25 +55,68 @@ export class MyModule { }
 ```
 - [Checkbox](https://material.angular.io/components/checkbox/api)
 `MatCheckbox : old version use md-checkbox, the new version use mat-checkbox`
+```
+import {MatCheckboxModule} from '@angular/material';
+```
 
 - [Radio button](https://material.angular.io/components/radio/api)
+```
+import {MatRadioModule} from '@angular/material';
+```
 
 - [Select](https://material.angular.io/components/select/api)
-
+```
+import {MatSelectModule} from '@angular/material';
+```
 `ngModule is from FormsModule`
+```
+import {MatSelectModule} from '@angular/material';
+```
 
 - [Input](https://material.angular.io/components/input/api)
+```
+import {MatInputModule} from '@angular/material';
+```
 - [Input Custom Error Matcher](https://material.angular.io/components/input/overview#custom-error-matcher)
 
 - [Textarea](https://material.angular.io/components/input/api)
+```
+import {MatInputModule} from '@angular/material';
+```
 
 - [Date Picker](https://material.angular.io/components/datepicker/api)
 ` need to import 'MatNativeDateModule'`
-
+```
+import {MatNativeDateModule} from '@angular/material';
+import {MatDatepickerModule} from '@angular/material';
+```
 - [Icons](https://material.angular.io/guides)
+```
+import {MatIconModule} from '@angular/material';
+```
 - [Buttons](https://material.angular.io/components/button/overview)
+```
+import {MatButtonModule} from '@angular/material';
+```
+
 - [Chips](https://material.angular.io/components/chips/overview)
+```
+import {MatChipsModule} from '@angular/material';
+```
+
+
 - [Progress spinner](https://material.angular.io/components/progress-spinner/overview)
+```
+import {MatProgressSpinnerModule} from '@angular/material';
+```
+
+- [Tooltop](https://material.angular.io/components/tooltip/api)
+```
+import {MatTooltipModule} from '@angular/material';
+```
+
+
+
 
 ## Examples 
 ```html
