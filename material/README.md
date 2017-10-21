@@ -44,6 +44,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 ```
 
 - Separate NgModule that imports all of the Angular Material components
+
+`NOTE' *** if you use seperate routing module ( not put the routing under the app.module ) to import all the components in the routing module, you need to put matarial module insdie routing module. ***
+
 ```html
 import {MatRadioModule, MatCheckboxModule} from '@angular/material'; 
 
@@ -115,6 +118,10 @@ import {MatProgressSpinnerModule} from '@angular/material';
 import {MatTooltipModule} from '@angular/material';
 ```
 
+- [Tabs](https://material.angular.io/components/tabs/api)
+```
+import {MatTabsModule} from '@angular/material';
+```
 
 
 

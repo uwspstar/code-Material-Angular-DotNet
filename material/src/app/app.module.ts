@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
-    MatButtonModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    MatIconModule,
-    MatInputModule,
-    MatNativeDateModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatSelectModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatIconModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatTooltipModule,
+  MatTabsModule,
 } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,6 +39,8 @@ import { AppComponent } from './app.component';
     MatButtonModule,
     MatChipsModule,
     MatProgressSpinnerModule,
+    MatTooltipModule,
+    MatTabsModule,
     NoopAnimationsModule
   ],
   providers: [],
