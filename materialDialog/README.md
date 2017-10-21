@@ -63,6 +63,7 @@ $ ng g c edit-course
 $ ng g s course
 ```
 
+### Behind seen
 - create injection token on edit course component
 ```javascript
 
@@ -85,6 +86,9 @@ providers: [
 ],
 
 ```
+
+### Material has Mat_DIALOG_DATA to auto do the injectionToken
+
 # Base Setup
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
