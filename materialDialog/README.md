@@ -63,7 +63,28 @@ $ ng g c edit-course
 $ ng g s course
 ```
 
+- create injection token on edit course component
+```javascript
 
+export const DIALOG_DATA = new InjectionToken('DIALOG_DATA');
+
+...
+constructor( @Inject(DIALOG_DATA) data: any) {
+    console.log(data);
+}
+...
+```
+- update app.module providers
+```
+...
+providers: [
+// CourseService, // shortway DI { provide: CourseService, useClass: CourseService }
+{ provide: CourseService, useClass: CourseService },
+{ provide: DIALOG_DATA, useValue: {} }
+
+],
+
+```
 # Base Setup
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 

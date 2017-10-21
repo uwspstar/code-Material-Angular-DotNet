@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, InjectionToken } from '@angular/core';
 import { EditCourseComponent } from './edit-course/edit-course.component';
 import { MatDialog } from '@angular/material';
+
 
 @Component({
   selector: 'app-root',

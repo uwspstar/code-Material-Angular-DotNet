@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, InjectionToken } from '@angular/core';
+
+export const DIALOG_DATA = new InjectionToken('DIALOG_DATA');
 
 @Component({
   selector: 'app-edit-course',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditCourseComponent implements OnInit {
 
-  constructor(data: any) {
+  constructor( @Inject(DIALOG_DATA) data: any) {
     console.log(data);
   }
 
