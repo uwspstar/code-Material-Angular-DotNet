@@ -123,6 +123,12 @@ import {MatTooltipModule} from '@angular/material';
 import {MatTabsModule} from '@angular/material';
 ```
 
+- [Dialog](https://material.angular.io/components/dialog/api)
+`use "mat-dialog-close" to close the dialog, such as <button mat-raised-button mat-dialog-close="yes">Yes</button>`
+```
+import {MatDialogModule} from '@angular/material';
+```
+
 
 
 ## Examples 

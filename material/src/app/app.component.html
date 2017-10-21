@@ -1,146 +1,147 @@
-<h1>CheckBox</h1>
-<hr>
-<mat-checkbox>Checkbox label</mat-checkbox>
-<hr>
-<mat-checkbox value="" color="primary" [checked]='true'>Checkbox : primary
-</mat-checkbox>
-<hr>
-<mat-checkbox value="my warn checkbox" color="warn" [checked]="isChecked">Checkbox : isChecked
-</mat-checkbox>
-<hr>
-<mat-checkbox color="warn" [checked]="isChecked" (change)="onChange($event)">Checkbox : onChange($event)
-</mat-checkbox>
-<hr>
-<mat-checkbox #showDetails color="warn" [checked]="isChecked" (change)="onChange($event)">Checkbox : showDetails when Checked = true
-</mat-checkbox>
-<div *ngIf="showDetails.checked">Some Details</div>
-<hr>
-<h1>Radio</h1>
-<hr>
-<mat-radio-group>
-    <mat-radio-button value="1">Option 1</mat-radio-button>
-    <mat-radio-button value="2" [checked]="isChecked">Option isChecked</mat-radio-button>
-</mat-radio-group>
-<hr>
-<mat-radio-group value="0">
-    <mat-radio-button value="0">Option 1</mat-radio-button>
-    <mat-radio-button value="1">Option set value checked in radio-group</mat-radio-button>
-</mat-radio-group>
-<hr>
-<h1>Select</h1>
-<hr>
-<h3>native h5 dropdown</h3>
-<select>
+<div style="padding: 2rem">
+    <h1>CheckBox</h1>
+    <hr>
+    <mat-checkbox>Checkbox label</mat-checkbox>
+    <hr>
+    <mat-checkbox value="" color="primary" [checked]='true'>Checkbox : primary
+    </mat-checkbox>
+    <hr>
+    <mat-checkbox value="my warn checkbox" color="warn" [checked]="isChecked">Checkbox : isChecked
+    </mat-checkbox>
+    <hr>
+    <mat-checkbox color="warn" [checked]="isChecked" (change)="onChange($event)">Checkbox : onChange($event)
+    </mat-checkbox>
+    <hr>
+    <mat-checkbox #showDetails color="warn" [checked]="isChecked" (change)="onChange($event)">Checkbox : showDetails when Checked = true
+    </mat-checkbox>
+    <div *ngIf="showDetails.checked">Some Details</div>
+    <hr>
+    <h1>Radio</h1>
+    <hr>
+    <mat-radio-group>
+        <mat-radio-button value="1">Option 1</mat-radio-button>
+        <mat-radio-button value="2" [checked]="isChecked">Option isChecked</mat-radio-button>
+    </mat-radio-group>
+    <hr>
+    <mat-radio-group value="0">
+        <mat-radio-button value="0">Option 1</mat-radio-button>
+        <mat-radio-button value="1">Option set value checked in radio-group</mat-radio-button>
+    </mat-radio-group>
+    <hr>
+    <h1>Select</h1>
+    <hr>
+    <h3>native h5 dropdown</h3>
+    <select>
   <option *ngFor="let color of colors" [value]="color.id">{{color.name}}</option>
 </select>
-<hr>
-<h3>select color without default</h3>
-<mat-select>
-    <mat-option *ngFor="let color of colors" [value]="color.id">{{color.name}}</mat-option>
-</mat-select>
-<hr>
-<h3>bind color = 2</h3>
-<mat-select [(ngModel)]="color">
-    <mat-option *ngFor="let color of colors" [value]="color.id">{{color.name}}</mat-option>
-</mat-select>
-<hr>
-<mat-form-field>
-    <mat-select placeholder="Favorite food">
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-            {{ food.viewValue }}
-        </mat-option>
+    <hr>
+    <h3>select color without default</h3>
+    <mat-select>
+        <mat-option *ngFor="let color of colors" [value]="color.id">{{color.name}}</mat-option>
     </mat-select>
-</mat-form-field>
-<hr>
-<h1>Input</h1>
-<hr>
-<form class="example-form">
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Favorite food" value="Sushi">
+    <hr>
+    <h3>bind color = 2</h3>
+    <mat-select [(ngModel)]="color">
+        <mat-option *ngFor="let color of colors" [value]="color.id">{{color.name}}</mat-option>
+    </mat-select>
+    <hr>
+    <mat-form-field>
+        <mat-select placeholder="Favorite food">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{ food.viewValue }}
+            </mat-option>
+        </mat-select>
     </mat-form-field>
-</form>
-<hr>
-<h3>Custom Error Matcher</h3>
-<form class="example-form">
-    <mat-form-field class="example-full-width">
-        <input matInput require ngModel #username="ngModel" name="username" placeholder="Username">
-        <mat-hint>Type a username.</mat-hint>
-        <span matSuffix>@domain.com</span>
-        <span matPrefix>admin.</span>
-        <mat-error *ngIf="username.invalid && usernam.errors.required">
-            The username is required
-        </mat-error>
+    <hr>
+    <h1>Input</h1>
+    <hr>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Favorite food" value="Sushi">
+        </mat-form-field>
+    </form>
+    <hr>
+    <h3>Custom Error Matcher</h3>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input matInput require ngModel #username="ngModel" name="username" placeholder="Username">
+            <mat-hint>Type a username.</mat-hint>
+            <span matSuffix>@domain.com</span>
+            <span matPrefix>admin.</span>
+            <mat-error *ngIf="username.invalid && usernam.errors.required">
+                The username is required
+            </mat-error>
+        </mat-form-field>
+    </form>
+    <hr>
+    <h1>Textarea</h1>
+    <hr>
+    <h3>Textarea Autosize</h3>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <textarea matInput matTextareaAutosize placeholder="description ..." rows="2"></textarea>
+        </mat-form-field>
+    </form>
+    <hr>
+    <h1>Date Picker</h1>
+    <hr>
+    <h3>touchUi="true"</h3>
+    <mat-form-field>
+        <input [min]="minDate" matInput [matDatepicker]="birthdate" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
+        <mat-datepicker #birthdate touchUi="true"></mat-datepicker>
     </mat-form-field>
-</form>
-<hr>
-<h1>Textarea</h1>
-<hr>
-<h3>Textarea Autosize</h3>
-<form class="example-form">
-    <mat-form-field class="example-full-width">
-        <textarea matInput matTextareaAutosize placeholder="description ..." rows="2"></textarea>
+    <hr>
+    <h3>(focus)="birthdate2.open"</h3>
+    <mat-form-field>
+        <input (focus)="birthdate2.open()" matInput [matDatepicker]="birthdate2" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="birthdate2"></mat-datepicker-toggle>
+        <mat-datepicker #birthdate2 touchUi="true"></mat-datepicker>
     </mat-form-field>
-</form>
-<hr>
-<h1>Date Picker</h1>
-<hr>
-<h3>touchUi="true"</h3>
-<mat-form-field>
-    <input [min]="minDate" matInput [matDatepicker]="birthdate" placeholder="Choose a date">
-    <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
-    <mat-datepicker #birthdate touchUi="true"></mat-datepicker>
-</mat-form-field>
-<hr>
-<h3>(focus)="birthdate2.open"</h3>
-<mat-form-field>
-    <input (focus)="birthdate2.open()" matInput [matDatepicker]="birthdate2" placeholder="Choose a date">
-    <mat-datepicker-toggle matSuffix [for]="birthdate2"></mat-datepicker-toggle>
-    <mat-datepicker #birthdate2 touchUi="true"></mat-datepicker>
-</mat-form-field>
-<hr>
-<h1>Icons</h1>
-<mat-icon>home</mat-icon>
-<mat-icon>add_alert</mat-icon>
-<mat-icon style="color:purple">home</mat-icon>
-<hr>
-<h1>Buttons</h1>
-<button mat-button>Button 1</button>
-<button mat-raised-button>Button 2</button>
-<button color="primary" mat-raised-button>Primary</button>
-<button color="accent" mat-raised-button>Accent</button>
-<button color="warn" mat-raised-button>Warn</button>
-<button mat-fab><mat-icon>check</mat-icon></button>
-<button color="primary" mat-fab><mat-icon>check</mat-icon></button>
-<hr>
-<h1>Chips</h1>
-<mat-chip-list>
-    <mat-chip>One fish</mat-chip>
-    <mat-chip>Two fish</mat-chip>
-    <mat-chip color="primary" selected="true">Primary fish</mat-chip>
-    <mat-chip color="accent" selected="true">Accent fish</mat-chip>
-</mat-chip-list>
-<hr>
-<h3>dynamic display Chips</h3>
-<a href="https://material.angular.io/components/chips/overview#chip-input">(See Detail Chips with input)</a>
-<!-- has error
+    <hr>
+    <h1>Icons</h1>
+    <mat-icon>home</mat-icon>
+    <mat-icon>add_alert</mat-icon>
+    <mat-icon style="color:purple">home</mat-icon>
+    <hr>
+    <h1>Buttons</h1>
+    <button mat-button>Button 1</button>
+    <button mat-raised-button>Button 2</button>
+    <button color="primary" mat-raised-button>Primary</button>
+    <button color="accent" mat-raised-button>Accent</button>
+    <button color="warn" mat-raised-button>Warn</button>
+    <button mat-fab><mat-icon>check</mat-icon></button>
+    <button color="primary" mat-fab><mat-icon>check</mat-icon></button>
+    <hr>
+    <h1>Chips</h1>
+    <mat-chip-list>
+        <mat-chip>One fish</mat-chip>
+        <mat-chip>Two fish</mat-chip>
+        <mat-chip color="primary" selected="true">Primary fish</mat-chip>
+        <mat-chip color="accent" selected="true">Accent fish</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <h3>dynamic display Chips</h3>
+    <a href="https://material.angular.io/components/chips/overview#chip-input">(See Detail Chips with input)</a>
+    <!-- has error
 <h3>Select mutiple Chips</h3>
 <mat-chip-list>
     <mat-chip *ngFor="let category of categories" (click)="category.selected =!category.selected" [selected]="category.selected">{{category.name}}</mat-chip>
 </mat-chip-list>
 -->
-<hr>
-<h3>Select All Chips</h3>
-<mat-chip-list>
+    <hr>
+    <h3>Select All Chips</h3>
     <mat-chip-list>
-        <mat-chip *ngFor="let category of categories" (click)="selectCategory(category)" [selected]="category.selected">{{category.name}}</mat-chip>
+        <mat-chip-list>
+            <mat-chip *ngFor="let category of categories" (click)="selectCategory(category)" [selected]="category.selected">{{category.name}}</mat-chip>
+        </mat-chip-list>
     </mat-chip-list>
-</mat-chip-list>
-<hr>
-<h1>Progress spinner</h1>
-<mat-spinner></mat-spinner>
-<hr>
-<h1>Tool tips</h1>
-<div style="padding: 2rem">
+    <hr>
+    <h1>Progress spinner</h1>
+    <mat-spinner></mat-spinner>
+    <hr>
+    <h1>Tool tips</h1>
+
     <span matTooltip="This is a Tooltip!">I have a tooltip</span>
     <hr>
     <span matTooltipPosition="right" matTooltip="right : This is a Tooltip!">Right have a tooltip</span>
@@ -150,11 +151,21 @@
     <span matTooltipPosition="before" matTooltip="before : This is a Tooltip!">Before have a tooltip</span>
     <hr>
     <span matTooltipPosition="after" matTooltip="after : This is a Tooltip!">After have a tooltip</span>
-</div>
 
-<hr>
-<h1>Tabs</h1>
-<mat-tab-group>
-    <mat-tab label="Tab 1">Content 1</mat-tab>
-    <mat-tab label="Tab 2">Content 2</mat-tab>
-</mat-tab-group>
+    <hr>
+    <h1>Tabs</h1>
+    <mat-tab-group>
+        <mat-tab label="Billing">Content of the billing tab</mat-tab>
+        <mat-tab label="Shipping">Content of the shipping tab</mat-tab>
+    </mat-tab-group>
+    <hr>
+    <h1>Dialog</h1>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+
+
+
+
+
+
+
+</div>

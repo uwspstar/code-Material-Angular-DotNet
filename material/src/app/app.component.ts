@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { EditCourseComponent } from './edit-course/edit-course.component';
 
 @Component({
   selector: 'app-root',
@@ -47,6 +49,15 @@ export class AppComponent {
       .forEach(c => c['selected'] = false);
 
     category.selected = !category.selected;
+  }
+
+  constructor(private dialog: MatDialog) {
+
+  }
+  openDialog() {
+    this.dialog.open(EditCourseComponent)
+      .afterClosed()
+      .subscribe(result => console.log(result));
   }
 
 }
