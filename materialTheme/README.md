@@ -101,6 +101,35 @@ $app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 <body class='mat-app-background mat-typography'>...
 ```
 
+- [Goolge Fonts](https://fonts.google.com/)
+
+- update sytle.css
+```javascript
+@import "https://fonts.googleapis.com/css?family=Open+Sans"
+```
+- update theme.scss [mat-typography-config](https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss)
+
+```javascript
+
+@import '~@angular/material/_theming';
+@include mat-core();
+
+// Define a custom theme
+$app-primary: mat-palette($mat-blue, 100);
+$app-accent: mat-palette($mat-yellow, 200);
+$app-warn: mat-palette($mat-red, 300);
+
+//$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+$app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+@include angular-material-theme($app-theme);
+
+// Define custom typography
+$app-typography:mat-typography-config( $font-family:'"open sans","Helvetica Neue",san-serif', $headline: mat-typography-level(65px, 60px, 700));
+
+@include angular-material-typography($app-typography);
+
+
+```
 ## Angular Setup
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
