@@ -1,0 +1,24 @@
+@mixin soft-border ($borde-radius) {
+    border: 1px solid #ccc;
+    border-radius: $borde-radius;
+    padding: 10px;
+}
+
+.box {
+    @include soft-border(5px)
+}
+
+.modern-box {
+    @include soft-border(10px)
+}
+
+$color: skyblue;
+h1 {
+    color: $color;
+}
+
+h2 {
+    color: $color;
+}
+
+@import 'another.scss';
