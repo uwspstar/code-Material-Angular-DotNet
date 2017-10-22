@@ -1,6 +1,11 @@
 # AngularChatbotWithDialogflow
+*** Google has changed `API.AI` to `Dialogflow` ***
 
-- Recommend to watch [Angular Chatbot with Dialogflow (API.ai)](https://www.youtube.com/watch?v=CKhV7-NF2OI) 
+- Recommend to watch [Angular Chatbot with Dialogflow (API.ai)](https://www.youtube.com/watch?v=CKhV7-NF2OI) by Jeff Delaney
+
+[source code see details](https://angularfirebase.com/lessons/chatbot-in-angular-with-dialogflow-api-ai/)
+
+- [dialogflow sign up](https://console.dialogflow.com/api-client/#/newAgent)
 
 - Initial Setup
 
@@ -23,6 +28,24 @@ $ npm install api-ai-javascript -D
 ],
 ...
 ```
+- create chat module
+```javascript 
+$ ng g module chat
+$ ng g service chat/chat - m chat
+$ ng g component chat/chat-dialog - m chat
+```
+
+- Client access token , read only client key
+```javascript
+export const environment = {
+  production: false,
+  dialogflow: {
+    angularBot: '<you_client_key>'
+  }
+};
+
+```
+- update chat.module.ts
 
 
 ## Angular setup
