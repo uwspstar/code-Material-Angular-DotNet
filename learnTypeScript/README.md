@@ -1,5 +1,6 @@
 # LearnTypeScript
 
+- Recommend to watch [TypeScript Fundamentals](https://app.pluralsight.com/player?course=typescript&author=dan-wahlin&name=typescript-m1&clip=0&mode=live)
 ``` javascript
 let user = {};
 user.name = 'xing';
