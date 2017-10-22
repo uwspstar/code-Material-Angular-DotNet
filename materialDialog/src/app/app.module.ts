@@ -9,6 +9,7 @@ import { MatDialogModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { CourseService } from './course.service';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,7 @@ import { CourseService } from './course.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatIconModule,
+    MaterialModule,
     NoopAnimationsModule
   ],
   providers: [
