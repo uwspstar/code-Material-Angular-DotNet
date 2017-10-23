@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image slide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="arrowleft" class="arrow"></div>
+        <div id="silider">
+            <div class="slide slide1">
+                <div class="slide-content">
+                    <span>Image One</span>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="slide-content">
+                    <span>Image Two</span>
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="slide-content">
+                    <span>Image Three</span>
+                </div>
+            </div>
+        </div>
+        <div id="arrowright" class="arrow"></div>
+    </div>
+    <script>
+        let sliderImages = document.querySelectorAll('.slide');
+        let arrowleft = document.querySelector('#arrow-left');
+        let arrowRight = document.querySelector('#arrow-right');
+        let current = 0;
+
+        // clearn all images
+        function reset() {
+            for (let i = 0; i < sliderImages.length; i++) {
+                sliderImages[i].style.display = 'none';
+            }
+        }
+
+        // init slide
+        function startSlide() {
+            reset();
+            sliderImages[0].style.display = 'block';
+        }
+
+        // show prew
+        function slideLeft() {
+            reset();
+            sliderImages[current - 1].style.display = 'block;'
+            current--;
+        }
+
+        // Left arrow click
+        arrowLeft.addEventListener('click', function() {
+            if (currnet === 0) {
+                current = sliderImages.length;
+            }
+            slideLeft();
+        })
+
+        // show next
+        function slideRight() {
+            reset();
+            sliderImages[current + 1].style.display = 'block';
+            current++;
+        }
+
+        // right rrow click
+        arrowRight.addEventListener('click', function() {
+            if (currnet === 0) {
+                current = sliderImages.length;
+            }
+            slideRight();
+        })
+
+
+        startSlide();
+    </script>
+</body>
+
+</html>
