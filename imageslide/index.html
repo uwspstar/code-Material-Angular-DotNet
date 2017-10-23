@@ -11,7 +11,7 @@
 
 <body>
     <div class="wrap">
-        <div id="arrowleft" class="arrow"></div>
+        <div id="arrow-left" class="arrow"></div>
         <div id="silider">
             <div class="slide slide1">
                 <div class="slide-content">
@@ -29,11 +29,11 @@
                 </div>
             </div>
         </div>
-        <div id="arrowright" class="arrow"></div>
+        <div id="arrow-right" class="arrow"></div>
     </div>
     <script>
         let sliderImages = document.querySelectorAll('.slide');
-        let arrowleft = document.querySelector('#arrow-left');
+        let arrowLeft = document.querySelector('#arrow-left');
         let arrowRight = document.querySelector('#arrow-right');
         let current = 0;
 
@@ -59,7 +59,7 @@
 
         // Left arrow click
         arrowLeft.addEventListener('click', function() {
-            if (currnet === 0) {
+            if (current === 0) {
                 current = sliderImages.length;
             }
             slideLeft();
@@ -72,10 +72,10 @@
             current++;
         }
 
-        // right rrow click
+        // right arrow click
         arrowRight.addEventListener('click', function() {
-            if (currnet === 0) {
-                current = sliderImages.length;
+            if (current === sliderImages.length) {
+                current = -1;
             }
             slideRight();
         })
