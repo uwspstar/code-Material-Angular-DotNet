@@ -1,4 +1,23 @@
-# flex css3
+# Flexbox CSS3
+
+*** use Modernizr to fix the browser issue with flexbox ***
+
+- Recommend watch [CSS Flexbox Tutorial](https://www.youtube.com/watch?v=Y8zMYaD1bz0) by The Net Ninja
+
+### intro
+- Flexbox is a css display type design
+- Control the position, size and spacing
+- responsively
+
+### usage 
+- Navigation bars & menus
+- Grid layouts
+- Bar charts
+- Equal height columns
+
+### Basic ( see example2.html)
+- apply a display type of tlex to the parent containe 
+
 
 - index.html
 ```html
