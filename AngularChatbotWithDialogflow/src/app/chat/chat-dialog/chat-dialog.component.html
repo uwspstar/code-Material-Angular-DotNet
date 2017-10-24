@@ -1,22 +1,24 @@
-<h1>
-    Jax-chatbot : dialogflow
-</h1>
+<mat-toolbar color="warn" class="toolbar mat-elevation-z3">
+    <mat-icon>chat</mat-icon> &nbsp; Jaxbot
+</mat-toolbar>
 
-<div class="container">
+<div class="messenger">
+
     <ng-container *ngFor="let message of messages | async">
 
-        <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                    'to':   message.sentBy === 'user' }">
-            {{ message.content }}
+        <div class="message-row" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                            'to':   message.sentBy === 'user' }">
+            <div class="message">
+                {{ message.content }}
+            </div>
         </div>
 
     </ng-container>
 
+    <div class="send-message" (click)="messageInput.click()">
+        <mat-form-field floatPlaceholder="never">
+            <input matInput #messageInput [(ngModel)]="formValue" (keyup.enter)="sendMessage()" placeholder="Type a message..." autofocus autocomplete="off">
+        </mat-form-field>
+    </div>
 
-    <label for="nameField">Your Message</label>
-
-
-    <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"><br>
-
-    <button (click)="sendMessage()">Send</button>
 </div>

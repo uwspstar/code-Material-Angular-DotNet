@@ -7,7 +7,7 @@ import 'rxjs/add/operator/scan';
   // tslint:disable-next-line:component-selector
   selector: 'chat-dialog',
   templateUrl: './chat-dialog.component.html',
-  styleUrls: ['./chat-dialog.component.css']
+  styleUrls: ['./chat-dialog.component.scss']
 })
 export class ChatDialogComponent implements OnInit {
 
