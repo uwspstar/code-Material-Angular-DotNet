@@ -18,6 +18,61 @@
 ### Basic ( see example2.html)
 - apply a display type of tlex to the parent containe 
 
+- Flex Containers
+```html
+.flex-container {
+    display: flex;
+    background: #fff;
+}
+```
+- Flex Grow
+```html
+// can setup as 12 grid column easy
+.box-1 {
+    background: red;
+    flex-grow: 1;
+}
+
+.box-2 {
+    background: blue;
+    flex-grow: 2;
+}
+
+.box-3 {
+    background: green;
+    flex-grow: 3;
+}
+```
+- Flex Shrink ( not use often)
+```html
+.box {
+    height: 100px;
+    min-width: 100px;
+    
+}
+
+.box-1 {
+    background: red;
+    flex-shrink: 1;
+}
+
+.box-2 {
+    background: blue;
+    flex-shrink: 2;
+}
+.box-3 {
+    background: blue;
+    flex-shrink: 3;
+}
+```
+
+- Flex Wrap
+```html
+
+```
+
+
+
 
 - index.html
 ```html
