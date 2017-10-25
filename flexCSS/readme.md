@@ -69,6 +69,17 @@
 - Flex Wrap
 ```html
 
+.flex-container {
+    display: flex;
+    background: #fff;
+    flex-wrap:wrap; //flex-wrap:wrap-reverse; 
+   
+}
+```
+
+
+- Flex Basis 
+```html
 ```
 
 
