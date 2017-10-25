@@ -80,6 +80,19 @@
 
 - Flex Basis 
 ```html
+.flex-container {
+        display: flex;
+        background: #fff;
+        flex-wrap: wrap;
+    }
+    
+    .box {
+        height: 100px;
+        min-width: 100px;
+        flex-basis: 200px;
+    }
+
+    // flex : 1 0 200px; means grow 1, shrink 1 and basic is 1
 ```
 
 
