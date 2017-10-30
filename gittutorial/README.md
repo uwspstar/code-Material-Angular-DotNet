@@ -93,9 +93,16 @@ $ git stash pop
 $ git fetch origin
 $ git reset --hard origin/default
 
+$ git clean -f // ignore changes
+$ git reset –-hard // back to last success commit
 
 $ git fetch origin
 $ git reset --hard origin/<branch_name>
+
+
+////// //////////////////
+$ git cherry-pick 0bf37b59ffb4f1ef5ea20a69b58e14f0575fd3e8
+
 
 ```
 ## Installing Git
