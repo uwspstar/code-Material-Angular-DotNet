@@ -47,6 +47,11 @@
 
 
 ```
+## Launching from the Command Line
+You can also run VS Code from the terminal by typing 'code' after adding it to the path:
+
+- Launch VS Code.
+- Open the Command Palette (Ctrl+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command
 
 ### TypeScript
 [TypeScript in 5 minutes](https://learnxinyminutes.com/docs/typescript/)
