@@ -88,6 +88,16 @@ $ git stash pop
 - STEP 8: `$ git push origin HEAD`
 // HEAD means Current branch
 
+```
+//////RESET LOCAL BRANCH to Origin/Default//////////////////
+$ git fetch origin
+$ git reset --hard origin/default
+
+
+$ git fetch origin
+$ git reset --hard origin/<branch_name>
+
+```
 ## Installing Git
 - [Source Tree](http://www.sourcetreeapp.com/)
 
