@@ -67,7 +67,7 @@ let list: Array<number> = [1, 2, 3];
 enum Color { Red, Green, Blue };
 let c: Color = Color.Green;
 ```
-- [TypeScript in 30 minutes](https://tutorialzine.com/2016/07/learn-typescript-in-30-minutes)
+- [TypeScript in 30 minutes](https://tutorialzine.com/2016/07/learn-typescript-in-30-minutes) by Danny Markov
 
 ### Angular
 
