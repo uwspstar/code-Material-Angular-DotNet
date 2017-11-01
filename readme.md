@@ -74,6 +74,19 @@ init : (s1:string, n1:number)=>void
 ...
 }
 ```
+
+```
+// Interfaces can also describe a function type
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+// Only the parameters' types are important, names are not important.
+let mySearch: SearchFunc;
+mySearch = function (src: string, sub: string) {
+  return src.search(sub) != -1;
+}
+
+```
 - [TypeScript in 30 minutes](https://tutorialzine.com/2016/07/learn-typescript-in-30-minutes) by Danny Markov
 
 ### Angular
