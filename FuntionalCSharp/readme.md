@@ -1,5 +1,7 @@
 # Functional C#
 
+`Functional programming (often abbreviated FP)` is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects. 
+
 ### Recommand to read
 - [Lambda Calculus - Computerphile](https://www.youtube.com/watch?v=eis11j_iGMs&t=633s)
 - [Functional Programming's Y Combinator - Computerphile](https://www.youtube.com/watch?v=9T8A89jgeTI)
