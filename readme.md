@@ -55,6 +55,13 @@ You can also run VS Code from the terminal by typing 'code' after adding it to t
 
 ### TypeScript
 - [TypeScript in 5 minutes](https://learnxinyminutes.com/docs/typescript/)
+```
+// For collections, there are typed arrays and generic arrays
+let list: number[] = [1, 2, 3];
+// Alternatively, using the generic array type
+let list: Array<number> = [1, 2, 3];
+
+```
 - [TypeScript in 30 minutes](https://tutorialzine.com/2016/07/learn-typescript-in-30-minutes)
 
 ### Angular
