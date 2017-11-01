@@ -72,6 +72,9 @@ let c: Color = Color.Green;
 init : (s1:string, n1:number)=>void
 = function(s1,n1){
 ...
+// Alternatively,
+function init (s1:string, n1:number) : void {
+...
 }
 ```
 
