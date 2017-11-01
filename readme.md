@@ -67,6 +67,13 @@ let list: Array<number> = [1, 2, 3];
 enum Color { Red, Green, Blue };
 let c: Color = Color.Green;
 ```
+
+```
+init : (s1:string, n1:number)=>void
+= function(s1,n1){
+...
+}
+```
 - [TypeScript in 30 minutes](https://tutorialzine.com/2016/07/learn-typescript-in-30-minutes) by Danny Markov
 
 ### Angular
