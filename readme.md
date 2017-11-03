@@ -93,7 +93,7 @@ mySearch = function (src: string, sub: string) {
 - [TypeScript in 30 minutes](https://tutorialzine.com/2016/07/learn-typescript-in-30-minutes) by Danny Markov
 
 ### Angular
-
+- Version 5.0.0 of Angular Now Available (https://blog.angular.io/version-5-0-0-of-angular-now-available-37e414935ced)
 - Angular 5 is coming, What's new [see here](https://www.youtube.com/watch?v=T83qYxlVOBw&feature=youtu.be&t=2411)
 
 - New Animation APIs
