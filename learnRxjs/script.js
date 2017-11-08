@@ -1,5 +1,18 @@
 
+/*
+var count = 0;
+var button = document.querySelector('button');
+Rx.Observable.fromEvent(button, 'click').subscribe(() => console.log(`clicked ${++count} times`));
+*/
 
+var count = 0;
+var button = document.querySelector('button');
+// 1. create source
+var source = Rx.Observable.fromEvent(button, 'click');
+// 2. set observer
+var observer = () => console.log(`clicked ${++count} times`);
+// 3. subscribe
+source.subscribe(observer);
 
 
 // 1. Create Observables - Define the stream

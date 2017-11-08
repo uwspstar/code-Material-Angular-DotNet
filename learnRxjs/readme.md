@@ -22,3 +22,17 @@ The essential concepts in RxJS which solve async event management are:
 
 - Schedulers: are centralized dispatchers to control concurrency, allowing us to coordinate when computation happens on e.g. setTimeout or requestAnimationFrame or others.
 
+
+### Examples
+
+```javascript
+var count = 0;
+var button = document.querySelector('button');
+// 1. create source
+var source = Rx.Observable.fromEvent(button, 'click');
+// 2. set observer
+var observer = () => console.log(`clicked ${++count} times`);
+// 3. subscribe
+source.subscribe(observer);
+```
+
