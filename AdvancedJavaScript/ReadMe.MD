@@ -22,3 +22,4 @@ var ar2 = ["xing", true, 888];
 //Error : ar2.length();  // ar2.length is not a function
 console.log(` ar2.length = ${ar2.length}`);
 ```
+- access an item in an array by using index
