@@ -55,7 +55,7 @@ $ npm install @angular/cli -g
 $ ng -v
 
 // create a new project : project-angular-material
-$ ng new project-angular-material
+$ ng new project-angular-material --style=scss --routing
 $ cd project-angular-material
 
 // install material
