@@ -47,6 +47,49 @@
 
 
 ```
+
+## Angular-cli and Angular Material
+```
+// install Angular-cli
+$ npm install @angular/cli -g
+$ ng -v
+
+// create a new project : project-angular-material
+$ ng new project-angular-material
+$ cd project-angular-material
+
+// install material
+$ npm install --save @angular/material @angular/cdk
+$ npm install --save @angular/animations
+
+//http://localhost:4200/
+$ ng serve
+
+// .angular-cli.json 
+"styles": [
+  "styles.scss"
+]
+
+//styles.css
+@import '~@angular/material/theming';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+
+
+@include mat-core();
+
+$primary: mat-palette($mat-lime, 500);
+$accent:  mat-palette($mat-lime, 500, A200, A400);
+$warn:    mat-palette($mat-red, 500);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+body {
+    font-family: $mat-font-family;
+}
+
+
+```
 ## Launching from the Command Line
 You can also run VS Code from the terminal by typing 'code' after adding it to the path:
 
