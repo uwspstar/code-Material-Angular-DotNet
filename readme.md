@@ -71,8 +71,10 @@ $ ng serve
 ]
 
 //styles.css
-@import '~@angular/material/theming';
-@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+//@import '~@angular/material/theming';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons'); 
+
 
 
 @include mat-core();
