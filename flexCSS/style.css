@@ -1,4 +1,9 @@
+body{
+    padding: 0;
+    margin: 0;
+}
 @media(min-width:760px) {
+    
     .container-1 {
         display: flex;
         /*
@@ -26,13 +31,32 @@
     flex-wrap: wrap;
 }
 
+
 .container-1 div,
 .container-2 div,
 .container-3 div {
     border: 1px solid #ccc;
     padding: 01rem;
 }
-
+.navbarbox div{
+    padding: 01rem;
+}
+.navbarbox  {
+    display: flex;
+    min-height: 60px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    box-shadow: 0px 1px 1px #ddd;
+}
+.navbar{
+    flex:1 100%;
+    background: #fff;
+    width:100%;
+}
+.top-break{
+    margin-top: 66px;
+}
 .container-2-box-1,
 .container-2-box-2,
 .container-2-box-3 {
