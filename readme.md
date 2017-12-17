@@ -62,6 +62,10 @@ $ cd project-angular-material
 $ npm install --save @angular/material @angular/cdk
 $ npm install --save @angular/animations
 
+//for moblie
+//$ npm install hammerjs
+//import 'hamerjs' --in main.ts page
+
 //http://localhost:4200/
 $ ng serve
 
