@@ -51,7 +51,7 @@
 ## Angular-cli and Angular Material
 ```
 //remove whole demoMT folder fro MAC
-rm -R demoMT
+$ rm -R demoMT
 
 // install Angular-cli
 $ npm install @angular/cli -g
